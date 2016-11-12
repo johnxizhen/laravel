@@ -1,0 +1,90 @@
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-07-11 20:38 UTC
+Nmap scan report for www.westca.com (50.22.174.50)
+Host is up (0.0091s latency).
+rDNS record for 50.22.174.50: 32.ae.1632.ip4.static.sl-reverse.com
+Not shown: 985 closed ports
+PORT     STATE    SERVICE    VERSION
+19/tcp   filtered chargen
+21/tcp   open     ftp        ProFTPD 1.3.3e
+22/tcp   open     tcpwrapped
+| ssh-hostkey: 1024 66:fc:a2:9a:c2:25:37:12:98:89:fc:9d:d9:28:a1:c5 (DSA)
+|_2048 37:53:12:7d:b5:f8:38:3a:fe:1b:fd:a8:fe:3c:ab:55 (RSA)
+25/tcp   open     smtp       Postfix smtpd
+|_smtp-commands: server2.www.westca.com, PIPELINING, SIZE 10240000, ETRN, STARTTLS, AUTH LOGIN DIGEST-MD5 PLAIN CRAM-MD5, ENHANCEDSTATUSCODES, 8BITMIME, DSN,
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2012-03-23T19:25:16+00:00
+|_Not valid after:  2013-03-23T19:25:16+00:00
+|_ssl-date: 2016-07-11T20:44:24+00:00; 0s from local time.
+53/tcp   open     domain     ISC BIND none
+| dns-nsid:
+|_  bind.version: none
+80/tcp   open     http       Apache httpd
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+| http-robots.txt: 10 disallowed entries
+| / admin.php error.php /admin/ /images/ /includes/
+|_/themes/ /blocks/ /modules/ /language/
+|_http-title: Site doesn't have a title (text/html; charset=gb2312).
+106/tcp  open     pop3pw     poppassd
+110/tcp  open     pop3       Courier pop3d
+|_pop3-capabilities: STLS IMPLEMENTATION(Courier Mail Server) USER APOP SASL(LOGIN CRAM-MD5 PLAIN) UIDL PIPELINING TOP LOGIN-DELAY(10)
+143/tcp  open     imap       Courier Imapd (released 2004)
+|_imap-capabilities: IDLE ACL2=UNION OK THREAD=ORDEREDSUBJECT NAMESPACE QUOTA ACL AUTH=CRAM-MD5 SORT completed CAPABILITY STARTTLSA0001 AUTH=PLAIN CHILDREN THREAD=REFERENCES IMAP4rev1 UIDPLUS
+443/tcp  open     ssl/http   Apache httpd
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+| http-robots.txt: 10 disallowed entries
+| / admin.php error.php /admin/ /images/ /includes/
+|_/themes/ /blocks/ /modules/ /language/
+|_http-title: Site doesn't have a title (text/html; charset=gb2312).
+| ssl-cert: Subject: commonName=www.westca.com
+| Not valid before: 2015-06-25T17:25:40+00:00
+|_Not valid after:  2016-06-25T17:25:40+00:00
+|_ssl-date: 2016-07-11T20:44:27+00:00; 0s from local time.
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+465/tcp  open     ssl/smtp   Postfix smtpd
+|_smtp-commands: server2.www.westca.com, PIPELINING, SIZE 10240000, ETRN, AUTH LOGIN DIGEST-MD5 PLAIN CRAM-MD5, ENHANCEDSTATUSCODES, 8BITMIME, DSN,
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2012-03-23T19:25:16+00:00
+|_Not valid after:  2013-03-23T19:25:16+00:00
+993/tcp  open     ssl/imap   Courier Imapd (released 2004)
+|_imap-capabilities: ACL2=UNIONA0001 IDLE completed ACL CAPABILITY OK AUTH=CRAM-MD5 CHILDREN THREAD=ORDEREDSUBJECT NAMESPACE AUTH=PLAIN QUOTA SORT THREAD=REFERENCES UIDPLUS IMAP4rev1
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2012-03-23T19:25:16+00:00
+|_Not valid after:  2013-03-23T19:25:16+00:00
+|_ssl-date: 2016-07-11T20:44:28+00:00; 0s from local time.
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+995/tcp  open     ssl/pop3   Courier pop3d
+|_pop3-capabilities: IMPLEMENTATION(Courier Mail Server) USER APOP SASL(LOGIN CRAM-MD5 PLAIN) UIDL PIPELINING TOP LOGIN-DELAY(10)
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2012-03-23T19:25:16+00:00
+|_Not valid after:  2013-03-23T19:25:16+00:00
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+3306/tcp filtered mysql
+8443/tcp open     ssl/http   sw-cp-server httpd (Parallels Plesk WebAdmin version psa-10.3.1-1013110726.09)
+|_http-favicon: Parallels Control Panel
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2012-03-23T19:25:43+00:00
+|_Not valid after:  2013-03-23T19:25:43+00:00
+|_ssl-date: 2016-07-11T20:44:26+00:00; 0s from local time.
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.0 - 3.9
+Network Distance: 15 hops
+Service Info: Hosts:  server2.www.westca.com, localhost.localdomain; OS: Unix
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT     ADDRESS
+1   0.01 ms host (172.17.42.1)
+2   ... 14
+15  8.65 ms 32.ae.1632.ip4.static.sl-reverse.com (50.22.174.50)
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 343.42 seconds

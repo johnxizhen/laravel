@@ -1,0 +1,85 @@
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-04-02 05:08 UTC
+Nmap scan report for lampedia.com (66.117.4.174)
+Host is up (0.034s latency).
+Not shown: 987 closed ports
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        Pure-FTPd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x    3 505        502              4096 Sep 26  2011 .
+| drwxr-xr-x    3 505        502              4096 Sep 26  2011 ..
+|_drwxr-xr-x    2 505        502              4096 Sep 22  2010 incoming
+| ssl-cert: Subject: commonName=advanced775.inmotionhosting.com
+| Not valid before: 2015-09-06T07:49:18+00:00
+|_Not valid after:  2016-09-05T07:49:18+00:00
+|_ssl-date: 2016-04-02T05:16:29+00:00; 0s from local time.
+22/tcp   open  ssh        OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 1024 b8:ec:b1:50:22:c6:71:f3:ee:ae:09:8b:cc:da:35:6b (DSA)
+|_2048 c5:3f:23:23:aa:fa:5f:98:55:90:20:e8:98:69:59:af (RSA)
+25/tcp   open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp   open  http       Apache httpd
+|_http-generator: RB
+|_http-methods: No Allow or Public header in OPTIONS response (status code 404)
+|_http-title: The page you requested cannot be found!
+110/tcp  open  pop3       Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN LOGIN) AUTH-RESP-CODE UIDL CAPA RESP-CODES TOP STLS USER PIPELINING
+143/tcp  open  imap       Dovecot imapd
+|_imap-capabilities: capabilities have post-login IDLE more SASL-IR ID LOGIN-REFERRALS NAMESPACE listed AUTH=PLAIN Pre-login OK AUTH=LOGINA0001 STARTTLS IMAP4rev1 LITERAL+ ENABLE
+443/tcp  open  ssl/http   Apache httpd
+|_http-generator: RB
+|_http-methods: No Allow or Public header in OPTIONS response (status code 404)
+|_http-title: The page you requested cannot be found!
+| ssl-cert: Subject: commonName=lampedia.com
+| Not valid before: 2015-09-02T00:00:00+00:00
+|_Not valid after:  2016-09-01T23:59:59+00:00
+|_ssl-date: 2016-04-02T05:16:31+00:00; 0s from local time.
+465/tcp  open  ssl/smtp   Exim smtpd 4.86_1
+| smtp-commands: advanced775.inmotionhosting.com Hello ec2-54-187-235-153.us-west-2.compute.amazonaws.com [54.187.235.153], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN, HELP, 
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=advanced775.inmotionhosting.com
+| Not valid before: 2015-09-06T07:49:19+00:00
+|_Not valid after:  2016-09-05T07:49:19+00:00
+587/tcp  open  smtp       Exim smtpd 4.86_1
+| smtp-commands: advanced775.inmotionhosting.com Hello ec2-54-187-235-153.us-west-2.compute.amazonaws.com [54.187.235.153], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=advanced775.inmotionhosting.com
+| Not valid before: 2015-09-06T07:49:19+00:00
+|_Not valid after:  2016-09-05T07:49:19+00:00
+|_ssl-date: 2016-04-02T05:16:29+00:00; 0s from local time.
+993/tcp  open  ssl/imap   Dovecot imapd
+|_imap-capabilities: capabilities have post-login IDLE more SASL-IR ID LOGIN-REFERRALS NAMESPACE listed AUTH=PLAIN Pre-login OK AUTH=LOGINA0001 LITERAL+ IMAP4rev1 ENABLE
+| ssl-cert: Subject: commonName=advanced775.inmotionhosting.com
+| Not valid before: 2016-02-25T08:47:18+00:00
+|_Not valid after:  2017-02-24T08:47:18+00:00
+|_ssl-date: 2016-04-02T05:16:29+00:00; 0s from local time.
+995/tcp  open  ssl/pop3   Dovecot pop3d
+|_pop3-capabilities: RESP-CODES SASL(PLAIN LOGIN) PIPELINING AUTH-RESP-CODE TOP UIDL USER CAPA
+| ssl-cert: Subject: commonName=advanced775.inmotionhosting.com
+| Not valid before: 2016-02-25T08:47:18+00:00
+|_Not valid after:  2017-02-24T08:47:18+00:00
+|_ssl-date: 2016-04-02T05:16:28+00:00; -1s from local time.
+3306/tcp open  mysql      MySQL 5.5.48-cll
+| mysql-info: Protocol: 10
+| Version: 5.5.48-cll
+| Thread ID: 1209477
+| Some Capabilities: Long Passwords, Connect with DB, Compress, ODBC, Transactions, Secure Connection
+| Status: Autocommit
+|_Salt: JXZ;V!>S
+5666/tcp open  tcpwrapped
+Device type: general purpose|WAP|router|firewall|broadband router
+Running (JUST GUESSING): Linux 2.6.X|2.4.X|3.X (97%), Linksys Linux 2.4.X (97%), Asus Linux 2.6.X (94%), Check Point Linux 2.4.X (91%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linksys:linux_kernel:2.4 cpe:/o:linux:linux_kernel:2.4 cpe:/o:linux:linux_kernel:2.6.22 cpe:/o:asus:linux_kernel:2.6 cpe:/h:asus:rt-n16 cpe:/o:checkpoint:linux_kernel:2.4 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Linux 2.6.9 - 2.6.21 (97%), OpenWrt White Russian 0.9 (Linux 2.4.30) (97%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (97%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (97%), Linux 2.6.18 - 2.6.24 (94%), Asus RT-AC66U router (Linux 2.6) (94%), Linux 2.4.18 (94%), Asus RT-N16 WAP (Linux 2.6) (93%), Asus RT-N66U WAP (Linux 2.6) (93%), Tomato 1.28 (Linux 2.6.22) (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 20 hops
+Service Info: Host: advanced775.inmotionhosting.com
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT      ADDRESS
+1   0.01 ms  host (172.17.42.1)
+2   ... 19
+20  33.47 ms 66.117.4.174
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 499.29 seconds

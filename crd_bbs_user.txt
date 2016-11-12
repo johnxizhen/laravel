@@ -1,0 +1,15 @@
+http://la-grappa.de/speisekarte/13
+diamondheadsports.com/index.php
+http://r57c99.com/shell/c99.txt
+D:\mysql5\Data\
+
+| uid  | email                      | username           | password                         | status | emailstatus | avatarstatus | videophotostatus | adminid | groupid | groupexpiry | extgroupids | regdate    | credits    | no
+tifysound | timeoffset | newpm | newprompt | accessmasks | allowadmincp | onlyacceptfriendpm | conisbind |
+
+|    1 | admin@admin.com            | admin              | f793bc82366548841f2226dab4e05ae9 |      0 |           0 |            0 |                0 |       1 |       1 |           0 |             | 1346932432 |       2525 |
+        0 |            |     0 |         0 |           0 |            1 |                  0 |         0 |
+
+
+
+| 1337 | ccjj19861022@163.com | junjun35701 | 31594a0dd74bbd1aca069d77a0e558ec |      0 |           1 |            0 |                0 |       1 |       1 |           0 |             | 1451273379 |      12 |           0 | 9999
+       |     0 |         1 |           0 |            1 |                  0 |         0 |

@@ -1,0 +1,3 @@
+https://legacy.ilsc.ca/ommms/login.aspx?ReturnUrl=/ommms/Default.aspx (POST)
+
+__VIEWSTATE=dDw1NDM3NDYwNTs7Ptps55XVCsZN4DlDE4gprur9ytM2&__VIEWSTATEGENERATOR=B45DA31E&UserName=test&UserPass=test&LoginBtn=Login

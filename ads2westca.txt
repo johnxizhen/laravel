@@ -1,0 +1,158 @@
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-04-30 05:22 UTC
+Nmap scan report for ads2.westca.com (50.22.174.51)
+Host is up (0.0085s latency).
+rDNS record for 50.22.174.51: 33.ae.1632.ip4.static.sl-reverse.com
+Not shown: 984 closed ports
+PORT     STATE    SERVICE    VERSION
+19/tcp   filtered chargen
+21/tcp   open     ftp        1.3.4a
+22/tcp   open     ssh        OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 1024 63:9e:f9:fa:a6:5a:85:7d:04:d6:fc:7d:08:af:ca:16 (DSA)
+|_2048 79:75:83:5d:5b:83:2e:b1:19:95:5d:2c:6d:3a:2d:75 (RSA)
+25/tcp   open     smtp       Postfix smtpd
+|_smtp-commands: ads.westca.com, PIPELINING, SIZE 10240000, ETRN, STARTTLS, AUTH PLAIN LOGIN CRAM-MD5 DIGEST-MD5, ENHANCEDSTATUSCODES, 8BITMIME, DSN,
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:20+00:00
+|_Not valid after:  2014-03-12T18:53:20+00:00
+|_ssl-date: 2016-04-30T05:28:41+00:00; 0s from local time.
+53/tcp   open     domain     ISC BIND none
+| dns-nsid:
+|_  bind.version: none
+80/tcp   open     http       Apache httpd
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+106/tcp  open     pop3pw     poppassd
+110/tcp  open     pop3       Courier pop3d
+|_pop3-capabilities: STLS LOGIN-DELAY(10) SASL(LOGIN CRAM-MD5 PLAIN) IMPLEMENTATION(Courier Mail Server) TOP PIPELINING UIDL APOP USER
+143/tcp  open     imap?
+|_imap-capabilities: OK STARTTLSA0001 NAMESPACE QUOTA ACL CHILDREN THREAD=ORDEREDSUBJECT THREAD=REFERENCES ACL2=UNION SORT AUTH=CRAM-MD5 AUTH=PLAIN IDLE UIDPLUS completed CAPABILITY IMAP4rev1
+443/tcp  open     ssl/http   Apache httpd
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:20+00:00
+|_Not valid after:  2014-03-12T18:53:20+00:00
+|_ssl-date: 2016-04-30T05:28:42+00:00; 0s from local time.
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+465/tcp  open     ssl/smtp   Postfix smtpd
+|_smtp-commands: ads.westca.com, PIPELINING, SIZE 10240000, ETRN, AUTH PLAIN LOGIN CRAM-MD5 DIGEST-MD5, ENHANCEDSTATUSCODES, 8BITMIME, DSN,
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:20+00:00
+|_Not valid after:  2014-03-12T18:53:20+00:00
+|_ssl-date: 2016-04-30T05:28:39+00:00; -1s from local time.
+993/tcp  open     ssl/imaps?
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:20+00:00
+|_Not valid after:  2014-03-12T18:53:20+00:00
+|_ssl-date: 2016-04-30T05:28:38+00:00; 0s from local time.
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+995/tcp  open     ssl/pop3   Courier pop3d
+|_pop3-capabilities: IMPLEMENTATION(Courier Mail Server) USER PIPELINING TOP LOGIN-DELAY(10) UIDL APOP SASL(LOGIN CRAM-MD5 PLAIN)
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:20+00:00
+|_Not valid after:  2014-03-12T18:53:20+00:00
+| sslv2:
+|   SSLv2 supported
+|_  ciphers: none
+3306/tcp open     mysql      MySQL 5.1.73
+8080/tcp open     http       lighttpd 1.4.28
+|_http-title: 404 - Not Found
+8443/tcp open     ssl/http   sw-cp-server httpd (Parallels Plesk WebAdmin version psa-11.0.9-110120608.16)
+|_http-favicon: Parallels Control Panel
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=Parallels Panel/organizationName=Parallels/stateOrProvinceName=Virginia/countryName=US
+| Not valid before: 2013-03-12T18:53:57+00:00
+|_Not valid after:  2014-03-12T18:53:57+00:00
+|_ssl-date: 2016-04-30T05:28:38+00:00; 0s from local time.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port143-TCP:V=6.40%I=7%D=4/30%Time=57244203%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,A1,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDREN\x20N
+SF:AMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x20QUOTA
+SF:\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\x20STARTTL
+SF:S\]\r\n")%r(GetRequest,103,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UI
+SF:DPLUS\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFER
+SF:ENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x2
+SF:0ACL2=UNION\x20STARTTLS\]\r\nGET\x20NO\x20Error\x20in\x20IMAP\x20comman
+SF:d\x20received\x20by\x20server\.\r\n\*\x20NO\x20Error\x20in\x20IMAP\x20c
+SF:ommand\x20received\x20by\x20server\.\r\n")%r(GenericLines,101,"\*\x20OK
+SF:\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20TH
+SF:READ=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-
+SF:MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\x20STARTTLS\]\r\n\*\x20N
+SF:O\x20Error\x20in\x20IMAP\x20command\x20received\x20by\x20server\.\r\n\*
+SF:\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\x20by\x20server\.\
+SF:r\n")%r(HTTPOptions,107,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPL
+SF:US\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFERENC
+SF:ES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20AC
+SF:L2=UNION\x20STARTTLS\]\r\nOPTIONS\x20NO\x20Error\x20in\x20IMAP\x20comma
+SF:nd\x20received\x20by\x20server\.\r\n\*\x20NO\x20Error\x20in\x20IMAP\x20
+SF:command\x20received\x20by\x20server\.\r\n")%r(RTSPRequest,107,"\*\x20OK
+SF:\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20TH
+SF:READ=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-
+SF:MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\x20STARTTLS\]\r\nOPTIONS
+SF:\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\x20by\x20server\.\
+SF:r\n\*\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\x20by\x20serv
+SF:er\.\r\n")%r(RPCCheck,A1,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDP
+SF:LUS\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFEREN
+SF:CES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20A
+SF:CL2=UNION\x20STARTTLS\]\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port993-TCP:V=6.40%T=SSL%I=7%D=4/30%Time=5724420A%P=x86_64-pc-linux-gnu
+SF:%r(NULL,98,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDRE
+SF:N\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x2
+SF:0QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\]\r\
+SF:n")%r(GenericLines,F8,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS
+SF:\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFERENCES
+SF:\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2
+SF:=UNION\]\r\n\*\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\x20b
+SF:y\x20server\.\r\n\*\x20NO\x20Error\x20in\x20IMAP\x20command\x20received
+SF:\x20by\x20server\.\r\n")%r(GetRequest,FA,"\*\x20OK\x20\[CAPABILITY\x20I
+SF:MAP4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x
+SF:20THREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20
+SF:IDLE\x20ACL\x20ACL2=UNION\]\r\nGET\x20NO\x20Error\x20in\x20IMAP\x20comm
+SF:and\x20received\x20by\x20server\.\r\n\*\x20NO\x20Error\x20in\x20IMAP\x2
+SF:0command\x20received\x20by\x20server\.\r\n")%r(HTTPOptions,FE,"\*\x20OK
+SF:\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20TH
+SF:READ=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-
+SF:MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\]\r\nOPTIONS\x20NO\x20Er
+SF:ror\x20in\x20IMAP\x20command\x20received\x20by\x20server\.\r\n\*\x20NO\
+SF:x20Error\x20in\x20IMAP\x20command\x20received\x20by\x20server\.\r\n")%r
+SF:(RTSPRequest,FE,"\*\x20OK\x20\[CAPABILITY\x20IMAP4rev1\x20UIDPLUS\x20CH
+SF:ILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20THREAD=REFERENCES\x20SO
+SF:RT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION
+SF:\]\r\nOPTIONS\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\x20by
+SF:\x20server\.\r\n\*\x20NO\x20Error\x20in\x20IMAP\x20command\x20received\
+SF:x20by\x20server\.\r\n")%r(RPCCheck,98,"\*\x20OK\x20\[CAPABILITY\x20IMAP
+SF:4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20THREAD=ORDEREDSUBJECT\x20T
+SF:HREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20AUTH=PLAIN\x20IDL
+SF:E\x20ACL\x20ACL2=UNION\]\r\n")%r(DNSVersionBindReq,98,"\*\x20OK\x20\[CA
+SF:PABILITY\x20IMAP4rev1\x20UIDPLUS\x20CHILDREN\x20NAMESPACE\x20THREAD=ORD
+SF:EREDSUBJECT\x20THREAD=REFERENCES\x20SORT\x20QUOTA\x20AUTH=CRAM-MD5\x20A
+SF:UTH=PLAIN\x20IDLE\x20ACL\x20ACL2=UNION\]\r\n");
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.0 - 3.9
+Network Distance: 14 hops
+Service Info: Hosts:  ads.westca.com, localhost.localdomain; OS: Unix
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+1   0.03 ms  host (172.17.42.1)
+2   ... 4
+5   0.55 ms  100.64.16.13
+6   0.86 ms  205.251.232.164
+7   1.83 ms  205.251.232.140
+8   8.42 ms  205.251.232.89
+9   10.88 ms 52.95.52.96
+10  8.98 ms  52.95.52.223
+11  9.16 ms  te1-5.bbr01.wb01.sea01.networklayer.com (206.81.80.140)
+12  8.09 ms  ae0.dar02.sr01.sea01.networklayer.com (173.192.18.159)
+13  8.51 ms  po2.fcr02.sr03.sea01.networklayer.com (67.228.118.227)
+14  7.57 ms  33.ae.1632.ip4.static.sl-reverse.com (50.22.174.51)
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 370.49 seconds

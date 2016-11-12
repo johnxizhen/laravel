@@ -1,0 +1,3 @@
+http://www.ebogame.com/user_findpwd.php?t=doemail (POST)
+
+data[name]=test&data[email]=tst&sub=

